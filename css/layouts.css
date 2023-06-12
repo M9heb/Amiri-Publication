@@ -1,0 +1,46 @@
+/* Width helper classes */
+.max-width-1440 {
+  max-width: 144rem;
+  justify-self: center;
+}
+.h-f-gap-32 {
+  display: flex;
+  gap: 3.2rem;
+}
+.v-f-gap-32 {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+.v-f-gap-16 {
+  gap: 1.6rem;
+}
+.gap-32 {
+  gap: 3.2rem;
+}
+
+/* Grid helper classes */
+.grid {
+  display: grid;
+}
+.grid-2-cols {
+  grid-template-columns: 1fr 1fr;
+}
+.grid-3-cols {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Flex helper classes */
+.flex {
+  display: flex;
+}
+.v-flex {
+  display: flex;
+  flex-direction: column;
+}
+.flex-align-center {
+  align-items: center;
+}
+.flex-justify-center {
+  justify-content: center;
+}
