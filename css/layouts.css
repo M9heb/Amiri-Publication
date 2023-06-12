@@ -22,6 +22,7 @@
 /* Grid helper classes */
 .grid {
   display: grid;
+  justify-content: center;
 }
 .grid-2-cols {
   grid-template-columns: 1fr 1fr;

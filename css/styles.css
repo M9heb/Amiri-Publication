@@ -204,6 +204,7 @@ body {
 }
 /* Main contents */
 .main-content {
+  display: grid;
   max-width: calc(100vw - 11rem);
   padding: 20rem 8rem;
 }
