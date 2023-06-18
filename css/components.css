@@ -26,7 +26,8 @@ input {
   color: var(--color-dark-brown);
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   border: 1px solid var(--color-red);
   box-shadow: 0px 0px 0px 5px rgba(231, 35, 35, 0.1);
   border-radius: 10px;
@@ -78,7 +79,6 @@ input:focus {
   color: var(--color-bright-red);
 }
 .textarea-input {
-  column-span: 2;
   background: #ffffff;
   border: 1px solid rgba(64, 37, 37, 0.4);
   border-radius: 10px;
@@ -89,4 +89,5 @@ input:focus {
   line-height: 1.5;
   text-align: right;
   color: var(--color-dark-brown);
+  transition: all 0.2s;
 }

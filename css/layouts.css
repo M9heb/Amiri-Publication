@@ -46,3 +46,6 @@
 .flex-justify-center {
   justify-content: center;
 }
+.col-span-2 {
+  grid-column: 1 / span 2;
+}
