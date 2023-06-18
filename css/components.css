@@ -67,3 +67,26 @@ input:focus {
 .btn--cancel:active {
   background-color: var(--color-bright-red);
 }
+.link {
+  font-weight: normal;
+  font-size: 2.4rem;
+  color: var(--color-red);
+  display: inline-block;
+}
+.link:hover,
+.link:active {
+  color: var(--color-bright-red);
+}
+.textarea-input {
+  column-span: 2;
+  background: #ffffff;
+  border: 1px solid rgba(64, 37, 37, 0.4);
+  border-radius: 10px;
+  outline: none;
+  padding: 1rem 2rem;
+  font-weight: normal;
+  font-size: 2.4rem;
+  line-height: 1.5;
+  text-align: right;
+  color: var(--color-dark-brown);
+}

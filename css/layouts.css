@@ -1,7 +1,6 @@
 /* Width helper classes */
 .max-width-1440 {
   max-width: 144rem;
-  justify-self: center;
 }
 .h-f-gap-32 {
   display: flex;
@@ -22,7 +21,9 @@
 /* Grid helper classes */
 .grid {
   display: grid;
+
   justify-content: center;
+  align-content: start;
 }
 .grid-2-cols {
   grid-template-columns: 1fr 1fr;

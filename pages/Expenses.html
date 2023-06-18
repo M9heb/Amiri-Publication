@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>بخش ثبت سفارشات</title>
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/layouts.css" />
     <link rel="stylesheet" href="../css/components.css" />
+    <title>بخش ثبت مصارف</title>
   </head>
   <body>
     <nav class="top-nav">
@@ -43,7 +43,7 @@
           </a>
         </div>
       </div>
-      <h1 class="heading-primary">بخش ثبت سفارشات</h1>
+      <h1 class="heading-primary">بخش ثبت مصارف</h1>
       <div class="nav--right-icons">
         <div class="icons-h-container">
           <a class="profile-icon" href="#">
@@ -114,7 +114,7 @@
             </a>
           </li>
 
-          <li class="nav--element nav-element__active">
+          <li class="nav--element">
             <a class="icons-h-container nav-anchor" href="#">
               <svg
                 class="icon"
@@ -161,8 +161,8 @@
               <p class="nav--element--label">پیگیری سفارش</p>
             </a>
           </li>
-          <li class="nav--element">
-            <a class="icons-h-container nav-anchor" href="Expenses.html">
+          <li class="nav--element nav-element__active">
+            <a class="icons-h-container nav-anchor" href="#">
               <svg
                 class="icon"
                 width="48"
@@ -179,7 +179,7 @@
               <p class="nav--element--label">ثبت مصارف</p>
             </a>
           </li>
-          <li class="nav--element">
+          <li class="nav--element ">
             <a class="icons-h-container" href="Buys.html">
               <svg
                 class="icon"
@@ -254,73 +254,27 @@
         </ul>
       </nav>
       <section class="main-content">
-        <div class="grid grid-2-cols gap-32 max-width-1440">
+        <form class="grid grid-2-cols gap-32 max-width-1440">
           <div class="v-flex v-f-gap-16">
-            <label for="name" class="label">نام مشتری</label>
-            <input type="text" id="name" class="text-input" />
+            <label for="price" class="label">میزان مصرف</label>
+            <input type="number" id="price" class="text-input" />
           </div>
+          
           <div class="v-flex v-f-gap-16">
-            <label for="id" class="label">آیدی فاکتور</label>
-            <input type="number" id="id" class="text-input" />
-          </div>
-          <div class="v-flex v-f-gap-16">
-            <label for="ordername" class="label">نام سفارش</label>
-            <input type="text" id="ordername" class="text-input" />
+            <label for="count" class="label">تاریخ مصرف</label>
+            <input type="date" id="count" class="text-input" />
           </div>
           <div class="v-flex v-f-gap-16">
-            <label for="ordertype" class="label">نوع سفارش</label>
-            <input type="text" id="ordertype" class="text-input" />
+            <label for="price" class="label">توضیحات</label>
+            <textarea  class="textarea-input"name="information" id="information" cols="30" rows="10"></textarea>
           </div>
-          <div class="v-flex v-f-gap-16">
-            <label for="totalcost" class="label">قیمت کل</label>
-            <input type="number" id="id" class="text-input" />
-          </div>
-          <div class="grid grid-2-cols gap-32">
-            <div class="v-flex v-f-gap-16">
-              <label for="count" class="label">تعداد</label>
-              <input type="number" id="id" class="text-input" />
-            </div>
-            <div class="v-flex v-f-gap-16">
-              <label for="cost" class="label">قیمت فی</label>
-              <input type="number" id="cost" class="text-input" />
-            </div>
-          </div>
-          <div class="grid grid-2-cols gap-32">
-            <div class="v-flex v-f-gap-16">
-              <label for="gotted" class="label">رسید</label>
-              <input type="number" id="gotted" class="text-input" />
-            </div>
-            <div class="v-flex v-f-gap-16">
-              <label for="remained" class="label">الباقی</label>
-              <input type="number" id="remained" class="text-input" />
-            </div>
-          </div>
-          <div class="grid grid-2-cols gap-32">
-            <div class="v-flex v-f-gap-16">
-              <label for="saveddate" class="label">تاریخ ثبت</label>
-              <input type="date" id="saveddate" class="text-input" />
-            </div>
-            <div class="v-flex v-f-gap-16">
-              <label for="givingdate" class="label">تاریخ تحویل</label>
-              <input type="date" id="givingdate" class="text-input" />
-            </div>
-          </div>
-
-          <div class="v-flex v-f-gap-16">
-            <label for="phone" class="label">شماره تماس مشتری</label>
-            <input type="text" id="phone" class="text-input" />
-          </div>
-          <div class="v-flex v-f-gap-16">
-            <label for="reciver" class="label">گیرنده سفارش</label>
-            <input type="text" id="reciver" class="text-input" />
-          </div>
+         
 
           <button type="submit" class="btn btn--primary">ثبت</button>
           <button type="reset" class="btn btn--cancel">کنسل</button>
-          <a href="ordersWithoutID.html" class="link"
-            >انجام سفارش بدون فاکتور <span clas="link--arrow">&larr;</span></a
+          <a href="ordersWithID.html" class="link"
           >
-        </div>
+        </form>
       </section>
     </div>
     <script src="../js/script.js"></script>
