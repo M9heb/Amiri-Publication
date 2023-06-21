@@ -32,6 +32,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
+a:hover {
+  color: inherit;
+}
 :root {
   --color-dark-brown: #402525;
   --color-gray: #40252566;
@@ -206,7 +209,10 @@ body {
 .main-content {
   display: grid;
   max-width: calc(100vw - 11rem);
-  padding: 20rem 8rem;
+  margin-top: 20rem;
+  padding: 0 8rem;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 .notification-bar {
@@ -224,4 +230,12 @@ body {
 }
 .notification-bar__red {
   background-color: var(--color-pale-pink);
+}
+.order-row {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 2rem 1rem;
+}
+.align-items-end {
+  align-items: flex-end;
 }

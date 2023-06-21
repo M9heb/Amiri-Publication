@@ -58,10 +58,13 @@ textarea:focus {
 }
 .btn--primary {
   color: white;
+  fill: white;
   background-color: var(--color-green);
 }
 .btn--cancel {
   color: white;
+  fill: white;
+
   background-color: var(--color-red);
 }
 .btn--cancel:hover,
