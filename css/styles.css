@@ -211,7 +211,7 @@ body {
   max-width: calc(100vw - 11rem);
   margin-top: 20rem;
   padding: 0 8rem;
-  height: 100vh;
+  height: calc(100vh - 20rem);
   overflow-y: auto;
 }
 
