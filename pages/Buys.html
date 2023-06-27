@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css" />
+    <script defer src="../js/bootstrap/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/layouts.css" />
     <link rel="stylesheet" href="../css/components.css" />
@@ -115,7 +117,7 @@
           </li>
 
           <li class="nav--element">
-            <a class="icons-h-container nav-anchor" href="#">
+            <a class="icons-h-container nav-anchor" href="OrdersWithID.html">
               <svg
                 class="icon"
                 width="48"
@@ -133,7 +135,7 @@
             </a>
           </li>
           <li class="nav--element">
-            <a class="icons-h-container nav-anchor" href="#">
+            <a class="icons-h-container nav-anchor" href="OrderCheckout.html">
               <svg
                 class="icon"
                 width="48"
@@ -180,7 +182,7 @@
             </a>
           </li>
           <li class="nav--element nav-element__active">
-            <a class="icons-h-container" href="#">
+            <a class="icons-h-container" href="Buys.html">
               <svg
                 class="icon"
                 width="48"
@@ -198,7 +200,7 @@
             </a>
           </li>
           <li class="nav--element">
-            <a class="icons-h-container nav-anchor" href="#">
+            <a class="icons-h-container nav-anchor" href="SalaryPament.html">
               <svg
                 class="icon"
                 width="48"
@@ -216,7 +218,10 @@
             </a>
           </li>
           <li class="nav--element">
-            <a class="icons-h-container nav-anchor" href="#">
+            <a
+              class="icons-h-container nav-anchor"
+              href="FinancialReports.html"
+            >
               <svg
                 class="icon"
                 width="48"
@@ -234,7 +239,7 @@
             </a>
           </li>
           <li class="nav--element">
-            <a class="icons-h-container nav-anchor" href="#">
+            <a class="icons-h-container nav-anchor" href="Settings.html">
               <svg
                 class="icon"
                 width="48"
@@ -254,44 +259,47 @@
         </ul>
       </nav>
       <section class="main-content">
-        <form class="grid grid-2-cols gap-32 max-width-1440">
-          <div class="v-flex v-f-gap-16">
-            <label for="companyname" class="label">شرکت یا فروشگاه</label>
-            <input type="text" id="companyname" class="text-input" />
+        <form class="container">
+          <div class="row">
+            <div class="col v-flex v-f-gap-16">
+              <label for="companyname" class="label">شرکت یا فروشگاه</label>
+              <input type="text" id="companyname" class="text-input" />
+            </div>
+            <div class="col v-flex v-f-gap-16">
+              <label for="count" class="label">تاریخ</label>
+              <input type="date" id="count" class="text-input" />
+            </div>
           </div>
-          <div class="grid grid-2-cols gap-32">
-            <div class="v-flex v-f-gap-16">
+          <div class="row my-5">
+            <div class="col-6 v-flex v-f-gap-16">
               <label for="kindofgood" class="label">نوع جنس</label>
               <input type="text" id="kindofgood" class="text-input" />
             </div>
-            <div class="v-flex v-f-gap-16">
+            <div class="col-3 v-flex v-f-gap-16">
               <label for="suffix" class="label"
                 >میتراژ، کیلو، کارتن، تعداد</label
               >
               <input type="number" id="suffix" class="text-input" />
             </div>
+            <div class="col-2 v-flex v-f-gap-16">
+              <label for="price" class="label">قیمت</label>
+              <input type="number" id="price" class="text-input" />
+            </div>
           </div>
-          <div class="v-flex v-f-gap-16">
-            <label for="count" class="label">تاریخ</label>
-            <input type="date" id="count" class="text-input" />
+          <div class="row my-5">
+            <div class="col v-flex v-f-gap-16">
+              <label for="price" class="label">رسید</label>
+              <input type="number" id="price" class="text-input" />
+            </div>
+            <div class="col v-flex v-f-gap-16">
+              <label for="price" class="label">الباقی</label>
+              <input type="number" id="price" class="text-input" />
+            </div>
           </div>
-          <div class="v-flex v-f-gap-16">
-            <label for="price" class="label">قیمت</label>
-            <input type="number" id="price" class="text-input" />
+          <div class="row my-5 gap-4 px-3">
+            <button type="submit" class="col btn btn--primary">ثبت</button>
+            <button type="reset" class="col btn btn--cancel">کنسل</button>
           </div>
-          <div class="v-flex v-f-gap-16">
-            <label for="price" class="label">رسید</label>
-            <input type="number" id="price" class="text-input" />
-          </div>
-          <div class="v-flex v-f-gap-16">
-            <label for="price" class="label">الباقی</label>
-            <input type="number" id="price" class="text-input" />
-          </div>
-
-          <button type="submit" class="btn btn--primary">ثبت</button>
-          <button type="reset" class="btn btn--cancel">کنسل</button>
-          <a href="ordersWithID.html" class="link"
-          >
         </form>
       </section>
     </div>

@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css" />
+    <script defer src="../js/bootstrap/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/layouts.css" />
     <link rel="stylesheet" href="../css/components.css" />
@@ -115,7 +117,7 @@
           </li>
 
           <li class="nav--element">
-            <a class="icons-h-container nav-anchor" href="#">
+            <a class="icons-h-container nav-anchor" href="OrdersWithID.html">
               <svg
                 class="icon"
                 width="48"
@@ -133,7 +135,7 @@
             </a>
           </li>
           <li class="nav--element">
-            <a class="icons-h-container nav-anchor" href="#">
+            <a class="icons-h-container nav-anchor" href="OrderCheckout.html">
               <svg
                 class="icon"
                 width="48"
@@ -162,7 +164,7 @@
             </a>
           </li>
           <li class="nav--element nav-element__active">
-            <a class="icons-h-container nav-anchor" href="#">
+            <a class="icons-h-container nav-anchor" href="Expenses.html">
               <svg
                 class="icon"
                 width="48"
@@ -179,7 +181,7 @@
               <p class="nav--element--label">ثبت مصارف</p>
             </a>
           </li>
-          <li class="nav--element ">
+          <li class="nav--element">
             <a class="icons-h-container" href="Buys.html">
               <svg
                 class="icon"
@@ -198,7 +200,7 @@
             </a>
           </li>
           <li class="nav--element">
-            <a class="icons-h-container nav-anchor" href="#">
+            <a class="icons-h-container nav-anchor" href="SalaryPament.html">
               <svg
                 class="icon"
                 width="48"
@@ -216,7 +218,10 @@
             </a>
           </li>
           <li class="nav--element">
-            <a class="icons-h-container nav-anchor" href="#">
+            <a
+              class="icons-h-container nav-anchor"
+              href="FinancialReports.html"
+            >
               <svg
                 class="icon"
                 width="48"
@@ -234,7 +239,7 @@
             </a>
           </li>
           <li class="nav--element">
-            <a class="icons-h-container nav-anchor" href="#">
+            <a class="icons-h-container nav-anchor" href="Settings.html">
               <svg
                 class="icon"
                 width="48"
@@ -254,26 +259,34 @@
         </ul>
       </nav>
       <section class="main-content">
-        <form class="grid grid-2-cols gap-32 max-width-1440">
-          <div class="v-flex v-f-gap-16">
-            <label for="price" class="label">میزان مصرف</label>
-            <input type="number" id="price" class="text-input" />
-          </div>
-          
-          <div class="v-flex v-f-gap-16">
-            <label for="count" class="label">تاریخ مصرف</label>
-            <input type="date" id="count" class="text-input" />
-          </div>
-          <div class="v-flex v-f-gap-16 col-span-2 ">
-            <label for="price" class="label">توضیحات</label>
-            <textarea  class="textarea-input"name="information" id="information" cols="30" rows="10"></textarea>
-          </div>
-         
+        <form class="container">
+          <div class="row">
+            <div class="col v-flex v-f-gap-16">
+              <label for="price" class="label">میزان مصرف</label>
+              <input type="number" id="price" class="text-input" />
+            </div>
 
-          <button type="submit" class="btn btn--primary">ثبت</button>
-          <button type="reset" class="btn btn--cancel">کنسل</button>
-          <a href="ordersWithID.html" class="link"
-          >
+            <div class="col v-flex v-f-gap-16">
+              <label for="count" class="label">تاریخ مصرف</label>
+              <input type="date" id="count" class="text-input" />
+            </div>
+          </div>
+          <div class="row my-5">
+            <div class="v-flex v-f-gap-16 col-span-2">
+              <label for="price" class="label">توضیحات</label>
+              <textarea
+                class="textarea-input"
+                name="information"
+                id="information"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </div>
+          </div>
+          <div class="row my-5 gap-4 px-3">
+            <button type="submit" class="col btn btn--primary">ثبت</button>
+            <button type="reset" class="col btn btn--cancel">کنسل</button>
+          </div>
         </form>
       </section>
     </div>

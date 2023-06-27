@@ -352,15 +352,31 @@
             </div>
           </div>
           <div class="my-5 row">
-            <div class="col v-flex v-f-gap-16">
+            <div class="col-3 v-flex v-f-gap-16">
+              <label for="customername" class="label">نام مشتری</label>
+              <input type="text" id="customername" class="text-input" />
+            </div>
+            <div class="col-3 v-flex v-f-gap-16">
               <label for="phone" class="label">شماره تماس مشتری</label>
               <input type="text" id="phone" class="text-input" />
             </div>
-            <div class="col v-flex v-f-gap-16">
+            <div class="col-3 v-flex v-f-gap-16">
+              <label for="thumbnail" class="label">عکس سفارش</label>
+              <input
+                required
+                class="text-input file-input"
+                type="file"
+                name="thumbnail"
+                id="thumbnail"
+                accept=".png , .jpg"
+              />
+            </div>
+            <div class="col-3 v-flex v-f-gap-16">
               <label for="reciver" class="label">گیرنده سفارش</label>
               <input type="text" id="reciver" class="text-input" />
             </div>
           </div>
+
           <div class="row my-5 gap-4 px-3">
             <button type="submit" class="col btn btn--primary">ثبت</button>
             <button type="reset" class="col btn btn--cancel">کنسل</button>
