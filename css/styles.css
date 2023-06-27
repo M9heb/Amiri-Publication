@@ -239,3 +239,12 @@ body {
 .align-items-end {
   align-items: flex-end;
 }
+/* Modal center codes */
+.modal-dialog {
+  border-radius: 20px;
+  overflow: hidden;
+  top: 20vh;
+}
+.modal-content {
+  padding: 3.2rem;
+}
