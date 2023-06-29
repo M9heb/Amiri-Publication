@@ -27,17 +27,27 @@ input {
 }
 
 input:focus,
-textarea:focus {
-  border: 1px solid var(--color-red);
-  box-shadow: 0px 0px 0px 5px rgba(231, 35, 35, 0.1);
+textarea:focus .form-control:focus {
+  border: 1px solid var(--color-red) !important;
+  box-shadow: 0px 0px 0px 5px rgba(231, 35, 35, 0.1) !important;
   border-radius: 10px;
 }
-.file-input {
+
+.input-group {
+  direction: ltr;
+  height: max-content;
 }
+
+.search-input {
+  max-width: 55rem;
+}
+
 /* Buttons */
 .btn,
 .btn:link,
 .btn:visited {
+  padding-right: 2rem;
+  padding-left: 2rem;
   font-family: "vazir";
   border: none;
   height: 6rem;
@@ -51,12 +61,30 @@ textarea:focus {
   transition: all 0.2s;
   cursor: pointer;
 }
+
+.btn--icon {
+  fill: var(--color-green);
+  height: 6rem;
+  display: flex;
+  flex: 0 0;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  cursor: pointer;
+  width: 6rem;
+}
+.btn--icon svg {
+  fill: inherit;
+}
 .btn__small {
   width: 20rem;
 }
 .btn--primary:hover,
 .btn--primary:active {
   background: var(--color-bright-green);
+}
+.btn--icon:hover {
+  fill: var(--color-bright-green);
 }
 .btn--primary {
   color: white;
@@ -95,4 +123,88 @@ textarea:focus {
   text-align: right;
   color: var(--color-dark-brown);
   transition: all 0.2s;
+}
+
+/* Categories for OrderCheckout section */
+.categories {
+  border-radius: 10px;
+  background-color: white;
+  max-width: 74rem;
+  display: grid;
+  height: max-content;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto 3.5rem;
+  overflow: hidden;
+}
+.categories__new {
+  border: 1px solid var(--color-pale-pink);
+}
+.categories__printed {
+  border: 1px solid var(--color-pale-green);
+}
+.category {
+  display: inline-block;
+  font-size: 2.4rem;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  color: var(--color-dark-brown);
+  transition: all 0.2s;
+}
+.category--new {
+  background-color: var(--color-pale-pink);
+}
+.category--printed {
+  background-color: var(--color-pale-green);
+}
+.category:hover {
+  background-color: var(--color-bright-brown);
+}
+/* Table styles */
+.table-custom {
+  min-width: 83rem;
+  overflow-y: scroll;
+  width: 100%;
+}
+.table-custom thead {
+  background: white;
+}
+.table-custom thead th {
+  font-size: 2.4rem;
+  font-weight: bold;
+  padding-bottom: 2rem;
+}
+
+.table-custom tbody tr td {
+  padding: 1.5rem 0.5rem;
+  font-size: 2.4rem;
+}
+.table-custom__red tbody tr:nth-child(odd) {
+  background-color: var(--color-pale-pink);
+}
+.table-custom__red tbody tr td:not(:last-of-type) {
+  border-left: 1px solid var(--color-pale-pink-border);
+  border-right: 1px solid var(--color-pale-pink-border);
+}
+.table-custom__red tbody tr td:last-of-type {
+  border-left: 1px solid var(--color-pale-pink-border);
+}
+.table-custom__red tbody tr:last-of-type {
+  border-bottom: 1px solid var(--color-pale-pink-border);
+}
+.table-custom__green tbody tr:nth-child(odd) {
+  background-color: var(--color-pale-green);
+}
+.table-custom__green tbody tr td:not(:last-of-type) {
+  border-left: 1px solid var(--color-pale-green-border);
+  border-right: 1px solid var(--color-pale-green-border);
+}
+.table-custom__green tbody tr td:last-of-type {
+  border-left: 1px solid var(--color-pale-green-border);
+}
+.table-custom__green tbody tr:last-of-type {
+  border-bottom: 1px solid var(--color-pale-green-border);
 }

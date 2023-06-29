@@ -37,14 +37,17 @@ a:hover {
 }
 :root {
   --color-dark-brown: #402525;
+  --color-bright-brown: #e7e7e756;
   --color-gray: #40252566;
   --color-pale-pink: #fde9e9;
+  --color-pale-pink-border: #fbd5d5;
   --color-green: #23e788;
   --color-red: #e62323;
   --color-bright-red: hwb(0 34% 10%);
 
-  --color-bright-green: hsl(151, 80%, 72%);
+  --color-bright-green: #7ef1ba;
   --color-pale-green: #d3fae7;
+  --color-pale-green-border: #d5fae8;
 }
 body {
   font-family: "vazir";
@@ -61,6 +64,9 @@ body {
 .icon {
   fill: var(--color-dark-brown);
   width: 4.8rem;
+}
+.icon-white {
+  fill: white;
 }
 .heading-primary {
   font-family: "vazir";
@@ -207,7 +213,6 @@ body {
 }
 /* Main contents */
 .main-content {
-  display: grid;
   max-width: calc(100vw - 11rem);
   margin-top: 20rem;
   padding: 0 8rem;
