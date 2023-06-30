@@ -179,7 +179,7 @@ textarea:focus .form-control:focus {
 }
 
 .table-custom tbody tr td {
-  padding: 1.5rem 0.5rem;
+  padding: 0.5rem 0.5rem;
   font-size: 2.4rem;
 }
 .table-custom__red tbody tr:nth-child(odd) {
