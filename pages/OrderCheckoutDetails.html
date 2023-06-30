@@ -45,7 +45,7 @@
           </a>
         </div>
       </div>
-      <h1 class="heading-primary"></h1>
+      <h1 class="heading-primary">بخش پیگیری سفارشات (جزئیات سفارش 44444)</h1>
       <div class="nav--right-icons">
         <div class="icons-h-container">
           <a class="profile-icon" href="#">
@@ -259,219 +259,102 @@
         </ul>
       </nav>
       <section class="main-content">
-        <div class="categories categories__new">
-          <a href="#" class="category category--new">سفارش های تازه ثبت شده</a>
-          <a href="OrderCheckoutPrinted.html" class="category category"
-            >سفارش های چاپ شده</a
-          >
-        </div>
-        <div class="input-group search-input align-center mb-8">
-          <input
-            type="text"
-            class="form-control text-input"
-            placeholder="... جستجو بر اساس نام سفارش ویا آیدی"
-          />
-          <button class="btn btn--primary" type="submit">
-            <svg
-              class="icon icon-white"
-              width="36"
-              height="36"
-              viewBox="0 0 36 36"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M29.85 31.4625L19.9875 21.6C19.2375 22.25 18.363 22.7563 17.364 23.1188C16.3651 23.4813 15.3021 23.6625 14.175 23.6625C11.471 23.6625 9.18244 22.725 7.30946 20.85C5.43649 18.975 4.5 16.7125 4.5 14.0625C4.5 11.4125 5.4375 9.15 7.3125 7.275C9.1875 5.4 11.4563 4.4625 14.1188 4.4625C16.7813 4.4625 19.0438 5.4 20.9062 7.275C22.7688 9.15 23.7 11.4144 23.7 14.0681C23.7 15.1394 23.525 16.175 23.175 17.175C22.825 18.175 22.3 19.1125 21.6 19.9875L31.5 29.8125L29.85 31.4625ZM14.1375 21.4125C16.1688 21.4125 17.8953 20.6938 19.3172 19.2563C20.7391 17.8188 21.45 16.0875 21.45 14.0625C21.45 12.0375 20.7391 10.3063 19.3172 8.86875C17.8953 7.43125 16.1688 6.7125 14.1375 6.7125C12.0854 6.7125 10.3411 7.43125 8.90468 8.86875C7.46822 10.3063 6.75 12.0375 6.75 14.0625C6.75 16.0875 7.46822 17.8188 8.90468 19.2563C10.3411 20.6938 12.0854 21.4125 14.1375 21.4125Z"
+        <form class="container">
+          <div class="row">
+            <div class="col v-flex v-f-gap-16">
+              <label for="ordername" class="label">نام سفارش</label>
+              <input type="text" id="ordername" class="text-input" />
+            </div>
+            <div class="col v-flex v-f-gap-16">
+              <label for="id" class="label">آیدی فاکتور</label>
+              <input type="number" id="id" class="text-input" />
+            </div>
+          </div>
+          <div class="my-5" id="order-row">
+            <div class="row my-5 order">
+              <div class="col v-flex v-f-gap-16">
+                <label class="label">نوع سفارش</label>
+                <input
+                  type="text"
+                  class="text-input ordertype"
+                  placeholder="بنر، فاکتور..."
+                />
+              </div>
+              <div class="col-3 v-flex v-f-gap-16">
+                <label for="amount" class="label">تعداد</label>
+                <input
+                  type="text"
+                  class="text-input amount"
+                  placeholder="1000"
+                />
+              </div>
+              <div class="col-3 v-flex v-f-gap-16">
+                <label for="cost" class="label">قیمت</label>
+                <input type="text" class="text-input cost" placeholder="1200" />
+              </div>
+            </div>
+          </div>
+
+          <div class="row my-5">
+            <div class="col v-flex v-f-gap-16">
+              <label for="totalcost" class="label">قیمت کل</label>
+              <input type="number" id="id" class="text-input" />
+            </div>
+            <div class="col-xl-3 v-flex v-f-gap-16">
+              <label for="gotted" class="label">رسید</label>
+              <input type="number" id="gotted" class="text-input" />
+            </div>
+            <div class="col-xl-3 v-flex v-f-gap-16">
+              <label for="remained" class="label">الباقی</label>
+              <input type="number" id="remained" class="text-input" />
+            </div>
+          </div>
+          <div class="row my-5">
+            <div class="col v-flex v-f-gap-16">
+              <label for="saveddate" class="label">تاریخ ثبت</label>
+              <input type="date" id="saveddate" class="text-input" />
+            </div>
+            <div class="col v-flex v-f-gap-16">
+              <label for="givingdate" class="label">تاریخ تحویل</label>
+              <input type="date" id="givingdate" class="text-input" />
+            </div>
+          </div>
+          <div class="my-5 row">
+            <div class="col-3 v-flex v-f-gap-16">
+              <label for="customername" class="label">نام مشتری</label>
+              <input type="text" id="customername" class="text-input" />
+            </div>
+            <div class="col-3 v-flex v-f-gap-16">
+              <label for="phone" class="label">شماره تماس مشتری</label>
+              <input type="text" id="phone" class="text-input" />
+            </div>
+            <div class="col-3 v-flex v-f-gap-16">
+              <label for="thumbnail" class="label">عکس سفارش</label>
+              <input
+                class="text-input file-input"
+                type="file"
+                name="thumbnail"
+                id="thumbnail"
+                accept=".png , .jpg"
               />
-            </svg>
-          </button>
-        </div>
-        <div class="table-responsive">
-          <table class="table-custom table-custom__red">
-            <thead>
-              <tr>
-                <th>نام سفارش</th>
-                <th>آیدی</th>
-                <th>پول کل</th>
-                <th>رسید</th>
-                <th>الباقی</th>
-                <th>تاریخ ثبت</th>
-                <th>تاریخ تحویل</th>
-                <th>قابلیت ها</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="">
-                <td>بنر برای ظرف فروشی</td>
-                <td>44444</td>
-                <td>2000</td>
-                <td>1000</td>
-                <td>1000</td>
-                <td>2 / 3 / 1402</td>
-                <td>2 / 3 / 1402</td>
-                <td class="flex gap-3">
-                  <a href="#" class="btn--icon">
-                    <svg
-                      width="39"
-                      height="39"
-                      viewBox="0 0 39 39"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.7 38.55C3.39833 38.55 2.28958 38.0921 1.37375 37.1763C0.457917 36.2604 0 35.1517 0 33.85V4.75C0 3.43457 0.457917 2.31405 1.37375 1.38845C2.28958 0.462816 3.39833 0 4.7 0H33.8C35.1154 0 36.236 0.462816 37.1616 1.38845C38.0872 2.31405 38.55 3.43457 38.55 4.75V33.85C38.55 35.1517 38.0872 36.2604 37.1616 37.1763C36.236 38.0921 35.1154 38.55 33.8 38.55H4.7ZM4.7 33.85H33.8V4.75H4.7V33.85ZM8.7 29.9H29.85C30.35 29.9 30.7 29.6896 30.9 29.2688C31.1 28.8479 31.0667 28.425 30.8 28L25.1 20.2C24.8564 19.9 24.5372 19.7417 24.1423 19.725C23.7474 19.7083 23.4333 19.8667 23.2 20.2L17.55 27.45L13.9 22.4C13.6231 22.0667 13.2872 21.9083 12.8923 21.925C12.4974 21.9417 12.1833 22.1 11.95 22.4L7.8 28C7.5 28.425 7.45 28.8479 7.65 29.2688C7.85 29.6896 8.2 29.9 8.7 29.9Z"
-                      />
-                    </svg>
-                  </a>
-                  <button class="btn btn--primary">چاپ شد</button>
-                  <a href="OrderCheckoutDetails.html" class="btn btn--primary"
-                    >جزئیات</a
-                  >
-                </td>
-              </tr>
-              <tr class="">
-                <td>بنر برای ظرف فروشی</td>
-                <td>44444</td>
-                <td>2000</td>
-                <td>1000</td>
-                <td>1000</td>
-                <td>2 / 3 / 1402</td>
-                <td>2 / 3 / 1402</td>
-                <td class="flex gap-3">
-                  <a href="#" class="btn--icon">
-                    <svg
-                      width="39"
-                      height="39"
-                      viewBox="0 0 39 39"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.7 38.55C3.39833 38.55 2.28958 38.0921 1.37375 37.1763C0.457917 36.2604 0 35.1517 0 33.85V4.75C0 3.43457 0.457917 2.31405 1.37375 1.38845C2.28958 0.462816 3.39833 0 4.7 0H33.8C35.1154 0 36.236 0.462816 37.1616 1.38845C38.0872 2.31405 38.55 3.43457 38.55 4.75V33.85C38.55 35.1517 38.0872 36.2604 37.1616 37.1763C36.236 38.0921 35.1154 38.55 33.8 38.55H4.7ZM4.7 33.85H33.8V4.75H4.7V33.85ZM8.7 29.9H29.85C30.35 29.9 30.7 29.6896 30.9 29.2688C31.1 28.8479 31.0667 28.425 30.8 28L25.1 20.2C24.8564 19.9 24.5372 19.7417 24.1423 19.725C23.7474 19.7083 23.4333 19.8667 23.2 20.2L17.55 27.45L13.9 22.4C13.6231 22.0667 13.2872 21.9083 12.8923 21.925C12.4974 21.9417 12.1833 22.1 11.95 22.4L7.8 28C7.5 28.425 7.45 28.8479 7.65 29.2688C7.85 29.6896 8.2 29.9 8.7 29.9Z"
-                      />
-                    </svg>
-                  </a>
-                  <button class="btn btn--primary">چاپ شد</button>
-                  <a href="OrderCheckoutDetails.html" class="btn btn--primary"
-                    >جزئیات</a
-                  >
-                </td>
-              </tr>
-              <tr class="">
-                <td>بنر برای ظرف فروشی</td>
-                <td>44444</td>
-                <td>2000</td>
-                <td>1000</td>
-                <td>1000</td>
-                <td>2 / 3 / 1402</td>
-                <td>2 / 3 / 1402</td>
-                <td class="flex gap-3">
-                  <a href="#" class="btn--icon">
-                    <svg
-                      width="39"
-                      height="39"
-                      viewBox="0 0 39 39"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.7 38.55C3.39833 38.55 2.28958 38.0921 1.37375 37.1763C0.457917 36.2604 0 35.1517 0 33.85V4.75C0 3.43457 0.457917 2.31405 1.37375 1.38845C2.28958 0.462816 3.39833 0 4.7 0H33.8C35.1154 0 36.236 0.462816 37.1616 1.38845C38.0872 2.31405 38.55 3.43457 38.55 4.75V33.85C38.55 35.1517 38.0872 36.2604 37.1616 37.1763C36.236 38.0921 35.1154 38.55 33.8 38.55H4.7ZM4.7 33.85H33.8V4.75H4.7V33.85ZM8.7 29.9H29.85C30.35 29.9 30.7 29.6896 30.9 29.2688C31.1 28.8479 31.0667 28.425 30.8 28L25.1 20.2C24.8564 19.9 24.5372 19.7417 24.1423 19.725C23.7474 19.7083 23.4333 19.8667 23.2 20.2L17.55 27.45L13.9 22.4C13.6231 22.0667 13.2872 21.9083 12.8923 21.925C12.4974 21.9417 12.1833 22.1 11.95 22.4L7.8 28C7.5 28.425 7.45 28.8479 7.65 29.2688C7.85 29.6896 8.2 29.9 8.7 29.9Z"
-                      />
-                    </svg>
-                  </a>
-                  <button class="btn btn--primary">چاپ شد</button>
-                  <a href="OrderCheckoutDetails.html" class="btn btn--primary"
-                    >جزئیات</a
-                  >
-                </td>
-              </tr>
-              <tr class="">
-                <td>بنر برای ظرف فروشی</td>
-                <td>44444</td>
-                <td>2000</td>
-                <td>1000</td>
-                <td>1000</td>
-                <td>2 / 3 / 1402</td>
-                <td>2 / 3 / 1402</td>
-                <td class="flex gap-3">
-                  <a href="#" class="btn--icon">
-                    <svg
-                      width="39"
-                      height="39"
-                      viewBox="0 0 39 39"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.7 38.55C3.39833 38.55 2.28958 38.0921 1.37375 37.1763C0.457917 36.2604 0 35.1517 0 33.85V4.75C0 3.43457 0.457917 2.31405 1.37375 1.38845C2.28958 0.462816 3.39833 0 4.7 0H33.8C35.1154 0 36.236 0.462816 37.1616 1.38845C38.0872 2.31405 38.55 3.43457 38.55 4.75V33.85C38.55 35.1517 38.0872 36.2604 37.1616 37.1763C36.236 38.0921 35.1154 38.55 33.8 38.55H4.7ZM4.7 33.85H33.8V4.75H4.7V33.85ZM8.7 29.9H29.85C30.35 29.9 30.7 29.6896 30.9 29.2688C31.1 28.8479 31.0667 28.425 30.8 28L25.1 20.2C24.8564 19.9 24.5372 19.7417 24.1423 19.725C23.7474 19.7083 23.4333 19.8667 23.2 20.2L17.55 27.45L13.9 22.4C13.6231 22.0667 13.2872 21.9083 12.8923 21.925C12.4974 21.9417 12.1833 22.1 11.95 22.4L7.8 28C7.5 28.425 7.45 28.8479 7.65 29.2688C7.85 29.6896 8.2 29.9 8.7 29.9Z"
-                      />
-                    </svg>
-                  </a>
-                  <button class="btn btn--primary">چاپ شد</button>
-                  <a href="OrderCheckoutDetails.html" class="btn btn--primary"
-                    >جزئیات</a
-                  >
-                </td>
-              </tr>
-              <tr class="">
-                <td>بنر برای ظرف فروشی</td>
-                <td>44444</td>
-                <td>2000</td>
-                <td>1000</td>
-                <td>1000</td>
-                <td>2 / 3 / 1402</td>
-                <td>2 / 3 / 1402</td>
-                <td class="flex gap-3">
-                  <a href="#" class="btn--icon">
-                    <svg
-                      width="39"
-                      height="39"
-                      viewBox="0 0 39 39"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.7 38.55C3.39833 38.55 2.28958 38.0921 1.37375 37.1763C0.457917 36.2604 0 35.1517 0 33.85V4.75C0 3.43457 0.457917 2.31405 1.37375 1.38845C2.28958 0.462816 3.39833 0 4.7 0H33.8C35.1154 0 36.236 0.462816 37.1616 1.38845C38.0872 2.31405 38.55 3.43457 38.55 4.75V33.85C38.55 35.1517 38.0872 36.2604 37.1616 37.1763C36.236 38.0921 35.1154 38.55 33.8 38.55H4.7ZM4.7 33.85H33.8V4.75H4.7V33.85ZM8.7 29.9H29.85C30.35 29.9 30.7 29.6896 30.9 29.2688C31.1 28.8479 31.0667 28.425 30.8 28L25.1 20.2C24.8564 19.9 24.5372 19.7417 24.1423 19.725C23.7474 19.7083 23.4333 19.8667 23.2 20.2L17.55 27.45L13.9 22.4C13.6231 22.0667 13.2872 21.9083 12.8923 21.925C12.4974 21.9417 12.1833 22.1 11.95 22.4L7.8 28C7.5 28.425 7.45 28.8479 7.65 29.2688C7.85 29.6896 8.2 29.9 8.7 29.9Z"
-                      />
-                    </svg>
-                  </a>
-                  <button class="btn btn--primary">چاپ شد</button>
-                  <a href="OrderCheckoutDetails.html" class="btn btn--primary"
-                    >جزئیات</a
-                  >
-                </td>
-              </tr>
-              <tr class="">
-                <td>بنر برای ظرف فروشی</td>
-                <td>44444</td>
-                <td>2000</td>
-                <td>1000</td>
-                <td>1000</td>
-                <td>2 / 3 / 1402</td>
-                <td>2 / 3 / 1402</td>
-                <td class="flex gap-3">
-                  <a href="#" class="btn--icon">
-                    <svg
-                      width="39"
-                      height="39"
-                      viewBox="0 0 39 39"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.7 38.55C3.39833 38.55 2.28958 38.0921 1.37375 37.1763C0.457917 36.2604 0 35.1517 0 33.85V4.75C0 3.43457 0.457917 2.31405 1.37375 1.38845C2.28958 0.462816 3.39833 0 4.7 0H33.8C35.1154 0 36.236 0.462816 37.1616 1.38845C38.0872 2.31405 38.55 3.43457 38.55 4.75V33.85C38.55 35.1517 38.0872 36.2604 37.1616 37.1763C36.236 38.0921 35.1154 38.55 33.8 38.55H4.7ZM4.7 33.85H33.8V4.75H4.7V33.85ZM8.7 29.9H29.85C30.35 29.9 30.7 29.6896 30.9 29.2688C31.1 28.8479 31.0667 28.425 30.8 28L25.1 20.2C24.8564 19.9 24.5372 19.7417 24.1423 19.725C23.7474 19.7083 23.4333 19.8667 23.2 20.2L17.55 27.45L13.9 22.4C13.6231 22.0667 13.2872 21.9083 12.8923 21.925C12.4974 21.9417 12.1833 22.1 11.95 22.4L7.8 28C7.5 28.425 7.45 28.8479 7.65 29.2688C7.85 29.6896 8.2 29.9 8.7 29.9Z"
-                      />
-                    </svg>
-                  </a>
-                  <button class="btn btn--primary">چاپ شد</button>
-                  <a href="OrderCheckoutDetails.html" class="btn btn--primary"
-                    >جزئیات</a
-                  >
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+            </div>
+            <div class="col-3 v-flex v-f-gap-16">
+              <label for="reciver" class="label">گیرنده سفارش</label>
+              <input type="text" id="reciver" class="text-input" />
+            </div>
+          </div>
+
+          <div class="row my-5 gap-4 px-3">
+            <button type="submit" class="col btn btn--primary">
+              تایید تغییرات
+            </button>
+            <button type="" class="col btn btn--cancel">حذف سفارش</button>
+          </div>
+
+          <a href="javascript:history.back()" class="link"
+            >بازگشت به عقب <span clas="link--arrow">&larr;</span></a
+          >
+        </form>
       </section>
     </div>
     <script src="../js/script.js"></script>
