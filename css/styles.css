@@ -218,6 +218,7 @@ body {
   padding: 0 8rem;
   height: calc(100vh - 20rem);
   overflow-y: auto;
+  display: relative;
 }
 
 .notification-bar {
@@ -252,4 +253,15 @@ body {
 }
 .modal-content {
   padding: 3.2rem;
+}
+
+/* Font-size */
+.fz32 {
+  font-size: 3.2rem;
+}
+.fz24 {
+  font-size: 2.4rem;
+}
+.v-align {
+  vertical-align: center;
 }

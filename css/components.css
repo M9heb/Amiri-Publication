@@ -71,6 +71,7 @@ textarea:focus .form-control:focus {
   justify-content: center;
   transition: all 0.2s;
   cursor: pointer;
+  position: relative;
   width: 6rem;
 }
 .btn--icon svg {
@@ -207,4 +208,21 @@ textarea:focus .form-control:focus {
 }
 .table-custom__green tbody tr:last-of-type {
   border-bottom: 1px solid var(--color-pale-green-border);
+}
+
+/* Search bar settings */
+.between-date-text {
+  font-size: 3.2rem;
+  vertical-align: center;
+  margin-bottom: 0;
+}
+
+/* Income Element */
+.income-element {
+  position: absolute;
+  bottom: 8rem;
+  left: 8rem;
+}
+.income-element .number-preview {
+  background-color: var(--color-pale-green);
 }

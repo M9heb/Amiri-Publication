@@ -17,6 +17,9 @@
 .gap-32 {
   gap: 3.2rem;
 }
+.align-items-center {
+  align-items: center;
+}
 
 /* Grid helper classes */
 .grid {
