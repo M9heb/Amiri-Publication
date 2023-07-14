@@ -220,7 +220,7 @@ textarea:focus .form-control:focus {
 /* Income Element */
 .income-element {
   position: absolute;
-  bottom: 8rem;
+  bottom: 4rem;
   left: 8rem;
 }
 .income-element .number-preview {

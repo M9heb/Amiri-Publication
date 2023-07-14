@@ -259,106 +259,95 @@
         </ul>
       </nav>
       <section class="main-content">
-        <form
-          class="date-container justify-content-center flex gap-32 mb-8"
-          action=""
-        >
-          <input type="date" name="" id="" class="text-input" />
-          <p class="between-date-text">الی</p>
-          <input type="date" name="" id="" class="text-input" />
-          <input type="submit" value="نمایش" class="btn btn--primary" />
+        <form class="container">
+          <div class="row">
+            <div class="col v-flex v-f-gap-16">
+              <label for="ordername" class="label">نام سفارش</label>
+              <input type="text" id="ordername" class="text-input" />
+            </div>
+            <div class="col v-flex v-f-gap-16">
+              <label for="id" class="label">آیدی فاکتور</label>
+              <input type="number" id="id" class="text-input" />
+            </div>
+          </div>
+          <div class="my-5" id="order-row">
+            <div class="row my-5 order">
+              <div class="col v-flex v-f-gap-16">
+                <label class="label">نوع سفارش</label>
+                <input
+                  type="text"
+                  class="text-input ordertype"
+                  placeholder="بنر، فاکتور..."
+                />
+              </div>
+              <div class="col-3 v-flex v-f-gap-16">
+                <label for="amount" class="label">تعداد</label>
+                <input
+                  type="text"
+                  class="text-input amount"
+                  placeholder="1000"
+                />
+              </div>
+              <div class="col-3 v-flex v-f-gap-16">
+                <label for="cost" class="label">قیمت</label>
+                <input type="text" class="text-input cost" placeholder="1200" />
+              </div>
+            </div>
+          </div>
+
+          <div class="row my-5">
+            <div class="col v-flex v-f-gap-16">
+              <label for="totalcost" class="label">قیمت کل</label>
+              <input type="number" id="id" class="text-input" />
+            </div>
+            <div class="col-xl-3 v-flex v-f-gap-16">
+              <label for="gotted" class="label">رسید</label>
+              <input type="number" id="gotted" class="text-input" />
+            </div>
+            <div class="col-xl-3 v-flex v-f-gap-16">
+              <label for="remained" class="label">الباقی</label>
+              <input type="number" id="remained" class="text-input" />
+            </div>
+          </div>
+          <div class="row my-5">
+            <div class="col v-flex v-f-gap-16">
+              <label for="saveddate" class="label">تاریخ ثبت</label>
+              <input type="date" id="saveddate" class="text-input" />
+            </div>
+            <div class="col v-flex v-f-gap-16">
+              <label for="givingdate" class="label">تاریخ تحویل</label>
+              <input type="date" id="givingdate" class="text-input" />
+            </div>
+          </div>
+          <div class="my-5 row">
+            <div class="col-3 v-flex v-f-gap-16">
+              <label for="customername" class="label">نام مشتری</label>
+              <input type="text" id="customername" class="text-input" />
+            </div>
+            <div class="col-3 v-flex v-f-gap-16">
+              <label for="phone" class="label">شماره تماس مشتری</label>
+              <input type="text" id="phone" class="text-input" />
+            </div>
+            <div class="col-3 v-flex v-f-gap-16">
+              <label for="thumbnail" class="label">عکس سفارش</label>
+              <input
+                class="text-input file-input"
+                type="file"
+                name="thumbnail"
+                id="thumbnail"
+                accept=".png , .jpg"
+              />
+            </div>
+            <div class="col-3 v-flex v-f-gap-16">
+              <label for="reciver" class="label">گیرنده سفارش</label>
+              <input type="text" id="reciver" class="text-input" />
+            </div>
+          </div>
+
+          <div class="row my-5 gap-4 px-3">
+            <button type="submit" class="col-6 btn btn--primary">تایید</button>
+          </div>
         </form>
-        <div class="v-f-gap-32">
-          <div
-            class="notification-bar notification-bar__green align-items-center"
-          >
-            <h2 class="heading-secondary mb-0">سفارشات</h2>
-            <div class="h-f-gap-32 align-items-center">
-              <p class="fz32 mb-0 v-align">تعداد</p>
-              <div class="number-preview">00</div>
-              <div></div>
-              <p class="fz32 mb-0 v-align">مجموعه</p>
-              <div class="number-preview">00</div>
-              <a
-                href="FinancialReports(ordersWithID).html"
-                class="btn btn--primary btn__small"
-                >جزئیات</a
-              >
-            </div>
-          </div>
-          <div
-            class="notification-bar notification-bar__green align-items-center"
-          >
-            <h2 class="heading-secondary mb-0">مصارف</h2>
-            <div class="h-f-gap-32 align-items-center">
-              <p class="fz32 mb-0 v-align">تعداد</p>
-              <div class="number-preview">00</div>
-              <div></div>
-              <p class="fz32 mb-0 v-align">مجموعه</p>
-              <div class="number-preview">00</div>
-              <a
-                href="FinancialReports(expenses).html"
-                class="btn btn--primary btn__small"
-                >جزئیات</a
-              >
-            </div>
-          </div>
-          <div
-            class="notification-bar notification-bar__green align-items-center"
-          >
-            <h2 class="heading-secondary mb-0">خریدها</h2>
-            <div class="h-f-gap-32 align-items-center">
-              <p class="fz32 mb-0 v-align">تعداد</p>
-              <div class="number-preview">00</div>
-              <div></div>
-              <p class="fz32 mb-0 v-align">مجموعه</p>
-              <div class="number-preview">00</div>
-              <a
-                href="FinancialReports(buys).html"
-                class="btn btn--primary btn__small"
-                >جزئیات</a
-              >
-            </div>
-          </div>
-          <div
-            class="notification-bar notification-bar__green align-items-center"
-          >
-            <h2 class="heading-secondary mb-0">معاشات</h2>
-            <div class="h-f-gap-32 align-items-center">
-              <p class="fz32 mb-0 v-align">تعداد</p>
-              <div class="number-preview">00</div>
-              <div></div>
-              <p class="fz32 mb-0 v-align">مجموعه</p>
-              <div class="number-preview">00</div>
-              <a
-                href="FinancialReports(salarypayment).html"
-                class="btn btn--primary btn__small"
-                >جزئیات</a
-              >
-            </div>
-          </div>
-          <div
-            class="notification-bar notification-bar__green align-items-center"
-          >
-            <h2 class="heading-secondary mb-0">غرضه ها</h2>
-            <div class="h-f-gap-32 align-items-center">
-              <p class="fz32 mb-0 v-align">تعداد</p>
-              <div class="number-preview">00</div>
-              <div></div>
-              <p class="fz32 mb-0 v-align">مجموعه</p>
-              <div class="number-preview">00</div>
-              <a
-                href="FinancialReports(loans).html"
-                class="btn btn--primary btn__small"
-                >جزئیات</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="income-element flex gap-32">
-          <p class="heading-primary">مجموعه درآمد خالص:</p>
-          <div class="number-preview">00</div>
-        </div>
       </section>
     </div>
     <script src="../js/script.js"></script>
