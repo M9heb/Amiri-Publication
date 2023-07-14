@@ -259,84 +259,411 @@
         </ul>
       </nav>
       <section class="main-content">
-        <form
-          class="date-container justify-content-center flex gap-32 mb-8"
-          action=""
-        >
-          <input type="date" name="" id="" class="text-input" />
-          <p class="between-date-text">الی</p>
-          <input type="date" name="" id="" class="text-input" />
-          <input type="submit" value="نمایش" class="btn btn--primary" />
-        </form>
-        <div class="v-f-gap-32">
-          <div
-            class="notification-bar notification-bar__green align-items-center"
+        <div class="categories categories__new">
+          <a
+            href="FinancialReports(ordersWithID).html"
+            class="category category--new"
+            >سفارشات با فاکتور</a
           >
-            <h2 class="heading-secondary mb-0">سفارشات</h2>
-            <div class="h-f-gap-32 align-items-center">
-              <p class="fz32 mb-0 v-align">تعداد</p>
-              <div class="number-preview">00</div>
-              <div></div>
-              <p class="fz32 mb-0 v-align">مجموعه</p>
-              <div class="number-preview">00</div>
-              <a href="#" class="btn btn--primary btn__small">جزئیات</a>
-            </div>
-          </div>
-          <div
-            class="notification-bar notification-bar__green align-items-center"
+          <a href="FinancialReports(ordersWithoutID).html" class="category"
+            >سفارشات بدون فاکتور</a
           >
-            <h2 class="heading-secondary mb-0">مصارف</h2>
-            <div class="h-f-gap-32 align-items-center">
-              <p class="fz32 mb-0 v-align">تعداد</p>
-              <div class="number-preview">00</div>
-              <div></div>
-              <p class="fz32 mb-0 v-align">مجموعه</p>
-              <div class="number-preview">00</div>
-              <a href="#" class="btn btn--primary btn__small">جزئیات</a>
-            </div>
-          </div>
-          <div
-            class="notification-bar notification-bar__green align-items-center"
+        </div>
+        <div class="flex gap-5 mb-8 filter-row">
+          <form
+            class="date-container justify-content-center flex gap-32"
+            action=""
           >
-            <h2 class="heading-secondary mb-0">خریدها</h2>
-            <div class="h-f-gap-32 align-items-center">
-              <p class="fz32 mb-0 v-align">تعداد</p>
-              <div class="number-preview">00</div>
-              <div></div>
-              <p class="fz32 mb-0 v-align">مجموعه</p>
-              <div class="number-preview">00</div>
-              <a href="#" class="btn btn--primary btn__small">جزئیات</a>
-            </div>
-          </div>
-          <div
-            class="notification-bar notification-bar__green align-items-center"
-          >
-            <h2 class="heading-secondary mb-0">معاشات</h2>
-            <div class="h-f-gap-32 align-items-center">
-              <p class="fz32 mb-0 v-align">تعداد</p>
-              <div class="number-preview">00</div>
-              <div></div>
-              <p class="fz32 mb-0 v-align">مجموعه</p>
-              <div class="number-preview">00</div>
-              <a href="#" class="btn btn--primary btn__small">جزئیات</a>
-            </div>
-          </div>
-          <div
-            class="notification-bar notification-bar__green align-items-center"
-          >
-            <h2 class="heading-secondary mb-0">غرضه ها</h2>
-            <div class="h-f-gap-32 align-items-center">
-              <p class="fz32 mb-0 v-align">تعداد</p>
-              <div class="number-preview">00</div>
-              <div></div>
-              <p class="fz32 mb-0 v-align">مجموعه</p>
-              <div class="number-preview">00</div>
-              <a href="#" class="btn btn--primary btn__small">جزئیات</a>
-            </div>
+            <input type="date" name="" id="" class="text-input" />
+            <p class="between-date-text">الی</p>
+            <input type="date" name="" id="" class="text-input" />
+            <button type="submit" class="btn btn--primary">
+              <svg
+                class="width36"
+                xmlns="http://www.w3.org/2000/svg"
+                height="48"
+                viewBox="0 -960 960 960"
+                width="48"
+              >
+                <path
+                  d="M796-121 533-384q-30 26-69.959 40.5T378-329q-108.162 0-183.081-75Q120-479 120-585t75-181q75-75 181.5-75t181 75Q632-691 632-584.85 632-542 618-502q-14 40-42 75l264 262-44 44ZM377-389q81.25 0 138.125-57.5T572-585q0-81-56.875-138.5T377-781q-82.083 0-139.542 57.5Q180-666 180-585t57.458 138.5Q294.917-389 377-389Z"
+                />
+              </svg>
+            </button>
+          </form>
+          <div class="search-input">
+            <input
+              type="search"
+              class="form-control text-input"
+              placeholder="جستجو بر اساس نام سفارش ویا آیدی..."
+            />
           </div>
         </div>
+        <table class="table-custom table-custom__red">
+          <thead>
+            <tr>
+              <th>نام سفارش</th>
+              <th>آیدی</th>
+              <th>پول کل</th>
+              <th>سفارش دهنده</th>
+              <th>شماره تماس</th>
+              <th>تاریخ ثبت</th>
+              <th>تاریخ تحویل</th>
+              <th>قابلیت ها</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="">
+              <td>بنر برای ظرف فروشی</td>
+              <td>44444</td>
+              <td>2000</td>
+              <td>غلام حیدر</td>
+              <td>0776513131</td>
+              <td>2 / 3 / 1402</td>
+              <td>2 / 3 / 1402</td>
+              <td class="flex gap-3">
+                <a
+                  href="#"
+                  class="btn--icon"
+                  data-bs-toggle="modal"
+                  data-bs-target="#thumbnail"
+                >
+                  <svg
+                    width="39"
+                    height="39"
+                    viewBox="0 0 39 39"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.7 38.55C3.39833 38.55 2.28958 38.0921 1.37375 37.1763C0.457917 36.2604 0 35.1517 0 33.85V4.75C0 3.43457 0.457917 2.31405 1.37375 1.38845C2.28958 0.462816 3.39833 0 4.7 0H33.8C35.1154 0 36.236 0.462816 37.1616 1.38845C38.0872 2.31405 38.55 3.43457 38.55 4.75V33.85C38.55 35.1517 38.0872 36.2604 37.1616 37.1763C36.236 38.0921 35.1154 38.55 33.8 38.55H4.7ZM4.7 33.85H33.8V4.75H4.7V33.85ZM8.7 29.9H29.85C30.35 29.9 30.7 29.6896 30.9 29.2688C31.1 28.8479 31.0667 28.425 30.8 28L25.1 20.2C24.8564 19.9 24.5372 19.7417 24.1423 19.725C23.7474 19.7083 23.4333 19.8667 23.2 20.2L17.55 27.45L13.9 22.4C13.6231 22.0667 13.2872 21.9083 12.8923 21.925C12.4974 21.9417 12.1833 22.1 11.95 22.4L7.8 28C7.5 28.425 7.45 28.8479 7.65 29.2688C7.85 29.6896 8.2 29.9 8.7 29.9Z"
+                    />
+                  </svg>
+                </a>
+                <div class="modal" id="thumbnail">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <img
+                        class="thumbnail__img"
+                        src="../img/ICDL Class.jpg"
+                        alt="پیش نمایشی برای این سفارش در درسترس نیست!"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <a href="OrderCheckoutDetails.html" class="btn btn--primary"
+                  >جزئیات</a
+                >
+              </td>
+            </tr>
+            <tr class="">
+              <td>بنر برای ظرف فروشی</td>
+              <td>44444</td>
+              <td>2000</td>
+              <td>غلام حیدر</td>
+              <td>0776513131</td>
+              <td>2 / 3 / 1402</td>
+              <td>2 / 3 / 1402</td>
+              <td class="flex gap-3">
+                <a
+                  href="#"
+                  class="btn--icon"
+                  data-bs-toggle="modal"
+                  data-bs-target="#thumbnail"
+                >
+                  <svg
+                    width="39"
+                    height="39"
+                    viewBox="0 0 39 39"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.7 38.55C3.39833 38.55 2.28958 38.0921 1.37375 37.1763C0.457917 36.2604 0 35.1517 0 33.85V4.75C0 3.43457 0.457917 2.31405 1.37375 1.38845C2.28958 0.462816 3.39833 0 4.7 0H33.8C35.1154 0 36.236 0.462816 37.1616 1.38845C38.0872 2.31405 38.55 3.43457 38.55 4.75V33.85C38.55 35.1517 38.0872 36.2604 37.1616 37.1763C36.236 38.0921 35.1154 38.55 33.8 38.55H4.7ZM4.7 33.85H33.8V4.75H4.7V33.85ZM8.7 29.9H29.85C30.35 29.9 30.7 29.6896 30.9 29.2688C31.1 28.8479 31.0667 28.425 30.8 28L25.1 20.2C24.8564 19.9 24.5372 19.7417 24.1423 19.725C23.7474 19.7083 23.4333 19.8667 23.2 20.2L17.55 27.45L13.9 22.4C13.6231 22.0667 13.2872 21.9083 12.8923 21.925C12.4974 21.9417 12.1833 22.1 11.95 22.4L7.8 28C7.5 28.425 7.45 28.8479 7.65 29.2688C7.85 29.6896 8.2 29.9 8.7 29.9Z"
+                    />
+                  </svg>
+                </a>
+                <div class="modal" id="thumbnail">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <img
+                        class="thumbnail__img"
+                        src="../img/ICDL Class.jpg"
+                        alt="پیش نمایشی برای این سفارش در درسترس نیست!"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <a href="OrderCheckoutDetails.html" class="btn btn--primary"
+                  >جزئیات</a
+                >
+              </td>
+            </tr>
+            <tr class="">
+              <td>بنر برای ظرف فروشی</td>
+              <td>44444</td>
+              <td>2000</td>
+              <td>غلام حیدر</td>
+              <td>0776513131</td>
+              <td>2 / 3 / 1402</td>
+              <td>2 / 3 / 1402</td>
+              <td class="flex gap-3">
+                <a
+                  href="#"
+                  class="btn--icon"
+                  data-bs-toggle="modal"
+                  data-bs-target="#thumbnail"
+                >
+                  <svg
+                    width="39"
+                    height="39"
+                    viewBox="0 0 39 39"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.7 38.55C3.39833 38.55 2.28958 38.0921 1.37375 37.1763C0.457917 36.2604 0 35.1517 0 33.85V4.75C0 3.43457 0.457917 2.31405 1.37375 1.38845C2.28958 0.462816 3.39833 0 4.7 0H33.8C35.1154 0 36.236 0.462816 37.1616 1.38845C38.0872 2.31405 38.55 3.43457 38.55 4.75V33.85C38.55 35.1517 38.0872 36.2604 37.1616 37.1763C36.236 38.0921 35.1154 38.55 33.8 38.55H4.7ZM4.7 33.85H33.8V4.75H4.7V33.85ZM8.7 29.9H29.85C30.35 29.9 30.7 29.6896 30.9 29.2688C31.1 28.8479 31.0667 28.425 30.8 28L25.1 20.2C24.8564 19.9 24.5372 19.7417 24.1423 19.725C23.7474 19.7083 23.4333 19.8667 23.2 20.2L17.55 27.45L13.9 22.4C13.6231 22.0667 13.2872 21.9083 12.8923 21.925C12.4974 21.9417 12.1833 22.1 11.95 22.4L7.8 28C7.5 28.425 7.45 28.8479 7.65 29.2688C7.85 29.6896 8.2 29.9 8.7 29.9Z"
+                    />
+                  </svg>
+                </a>
+                <div class="modal" id="thumbnail">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <img
+                        class="thumbnail__img"
+                        src="../img/ICDL Class.jpg"
+                        alt="پیش نمایشی برای این سفارش در درسترس نیست!"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <a href="OrderCheckoutDetails.html" class="btn btn--primary"
+                  >جزئیات</a
+                >
+              </td>
+            </tr>
+            <tr class="">
+              <td>بنر برای ظرف فروشی</td>
+              <td>44444</td>
+              <td>2000</td>
+              <td>غلام حیدر</td>
+              <td>0776513131</td>
+              <td>2 / 3 / 1402</td>
+              <td>2 / 3 / 1402</td>
+              <td class="flex gap-3">
+                <a
+                  href="#"
+                  class="btn--icon"
+                  data-bs-toggle="modal"
+                  data-bs-target="#thumbnail"
+                >
+                  <svg
+                    width="39"
+                    height="39"
+                    viewBox="0 0 39 39"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.7 38.55C3.39833 38.55 2.28958 38.0921 1.37375 37.1763C0.457917 36.2604 0 35.1517 0 33.85V4.75C0 3.43457 0.457917 2.31405 1.37375 1.38845C2.28958 0.462816 3.39833 0 4.7 0H33.8C35.1154 0 36.236 0.462816 37.1616 1.38845C38.0872 2.31405 38.55 3.43457 38.55 4.75V33.85C38.55 35.1517 38.0872 36.2604 37.1616 37.1763C36.236 38.0921 35.1154 38.55 33.8 38.55H4.7ZM4.7 33.85H33.8V4.75H4.7V33.85ZM8.7 29.9H29.85C30.35 29.9 30.7 29.6896 30.9 29.2688C31.1 28.8479 31.0667 28.425 30.8 28L25.1 20.2C24.8564 19.9 24.5372 19.7417 24.1423 19.725C23.7474 19.7083 23.4333 19.8667 23.2 20.2L17.55 27.45L13.9 22.4C13.6231 22.0667 13.2872 21.9083 12.8923 21.925C12.4974 21.9417 12.1833 22.1 11.95 22.4L7.8 28C7.5 28.425 7.45 28.8479 7.65 29.2688C7.85 29.6896 8.2 29.9 8.7 29.9Z"
+                    />
+                  </svg>
+                </a>
+                <div class="modal" id="thumbnail">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <img
+                        class="thumbnail__img"
+                        src="../img/ICDL Class.jpg"
+                        alt="پیش نمایشی برای این سفارش در درسترس نیست!"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <a href="OrderCheckoutDetails.html" class="btn btn--primary"
+                  >جزئیات</a
+                >
+              </td>
+            </tr>
+            <tr class="">
+              <td>بنر برای ظرف فروشی</td>
+              <td>44444</td>
+              <td>2000</td>
+              <td>غلام حیدر</td>
+              <td>0776513131</td>
+              <td>2 / 3 / 1402</td>
+              <td>2 / 3 / 1402</td>
+              <td class="flex gap-3">
+                <a
+                  href="#"
+                  class="btn--icon"
+                  data-bs-toggle="modal"
+                  data-bs-target="#thumbnail"
+                >
+                  <svg
+                    width="39"
+                    height="39"
+                    viewBox="0 0 39 39"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.7 38.55C3.39833 38.55 2.28958 38.0921 1.37375 37.1763C0.457917 36.2604 0 35.1517 0 33.85V4.75C0 3.43457 0.457917 2.31405 1.37375 1.38845C2.28958 0.462816 3.39833 0 4.7 0H33.8C35.1154 0 36.236 0.462816 37.1616 1.38845C38.0872 2.31405 38.55 3.43457 38.55 4.75V33.85C38.55 35.1517 38.0872 36.2604 37.1616 37.1763C36.236 38.0921 35.1154 38.55 33.8 38.55H4.7ZM4.7 33.85H33.8V4.75H4.7V33.85ZM8.7 29.9H29.85C30.35 29.9 30.7 29.6896 30.9 29.2688C31.1 28.8479 31.0667 28.425 30.8 28L25.1 20.2C24.8564 19.9 24.5372 19.7417 24.1423 19.725C23.7474 19.7083 23.4333 19.8667 23.2 20.2L17.55 27.45L13.9 22.4C13.6231 22.0667 13.2872 21.9083 12.8923 21.925C12.4974 21.9417 12.1833 22.1 11.95 22.4L7.8 28C7.5 28.425 7.45 28.8479 7.65 29.2688C7.85 29.6896 8.2 29.9 8.7 29.9Z"
+                    />
+                  </svg>
+                </a>
+                <div class="modal" id="thumbnail">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <img
+                        class="thumbnail__img"
+                        src="../img/ICDL Class.jpg"
+                        alt="پیش نمایشی برای این سفارش در درسترس نیست!"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <a href="OrderCheckoutDetails.html" class="btn btn--primary"
+                  >جزئیات</a
+                >
+              </td>
+            </tr>
+            <tr class="">
+              <td>بنر برای ظرف فروشی</td>
+              <td>44444</td>
+              <td>2000</td>
+              <td>غلام حیدر</td>
+              <td>0776513131</td>
+              <td>2 / 3 / 1402</td>
+              <td>2 / 3 / 1402</td>
+              <td class="flex gap-3">
+                <a
+                  href="#"
+                  class="btn--icon"
+                  data-bs-toggle="modal"
+                  data-bs-target="#thumbnail"
+                >
+                  <svg
+                    width="39"
+                    height="39"
+                    viewBox="0 0 39 39"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.7 38.55C3.39833 38.55 2.28958 38.0921 1.37375 37.1763C0.457917 36.2604 0 35.1517 0 33.85V4.75C0 3.43457 0.457917 2.31405 1.37375 1.38845C2.28958 0.462816 3.39833 0 4.7 0H33.8C35.1154 0 36.236 0.462816 37.1616 1.38845C38.0872 2.31405 38.55 3.43457 38.55 4.75V33.85C38.55 35.1517 38.0872 36.2604 37.1616 37.1763C36.236 38.0921 35.1154 38.55 33.8 38.55H4.7ZM4.7 33.85H33.8V4.75H4.7V33.85ZM8.7 29.9H29.85C30.35 29.9 30.7 29.6896 30.9 29.2688C31.1 28.8479 31.0667 28.425 30.8 28L25.1 20.2C24.8564 19.9 24.5372 19.7417 24.1423 19.725C23.7474 19.7083 23.4333 19.8667 23.2 20.2L17.55 27.45L13.9 22.4C13.6231 22.0667 13.2872 21.9083 12.8923 21.925C12.4974 21.9417 12.1833 22.1 11.95 22.4L7.8 28C7.5 28.425 7.45 28.8479 7.65 29.2688C7.85 29.6896 8.2 29.9 8.7 29.9Z"
+                    />
+                  </svg>
+                </a>
+                <div class="modal" id="thumbnail">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <img
+                        class="thumbnail__img"
+                        src="../img/ICDL Class.jpg"
+                        alt="پیش نمایشی برای این سفارش در درسترس نیست!"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <a href="OrderCheckoutDetails.html" class="btn btn--primary"
+                  >جزئیات</a
+                >
+              </td>
+            </tr>
+            <tr class="">
+              <td>بنر برای ظرف فروشی</td>
+              <td>44444</td>
+              <td>2000</td>
+              <td>غلام حیدر</td>
+              <td>0776513131</td>
+              <td>2 / 3 / 1402</td>
+              <td>2 / 3 / 1402</td>
+              <td class="flex gap-3">
+                <a
+                  href="#"
+                  class="btn--icon"
+                  data-bs-toggle="modal"
+                  data-bs-target="#thumbnail"
+                >
+                  <svg
+                    width="39"
+                    height="39"
+                    viewBox="0 0 39 39"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.7 38.55C3.39833 38.55 2.28958 38.0921 1.37375 37.1763C0.457917 36.2604 0 35.1517 0 33.85V4.75C0 3.43457 0.457917 2.31405 1.37375 1.38845C2.28958 0.462816 3.39833 0 4.7 0H33.8C35.1154 0 36.236 0.462816 37.1616 1.38845C38.0872 2.31405 38.55 3.43457 38.55 4.75V33.85C38.55 35.1517 38.0872 36.2604 37.1616 37.1763C36.236 38.0921 35.1154 38.55 33.8 38.55H4.7ZM4.7 33.85H33.8V4.75H4.7V33.85ZM8.7 29.9H29.85C30.35 29.9 30.7 29.6896 30.9 29.2688C31.1 28.8479 31.0667 28.425 30.8 28L25.1 20.2C24.8564 19.9 24.5372 19.7417 24.1423 19.725C23.7474 19.7083 23.4333 19.8667 23.2 20.2L17.55 27.45L13.9 22.4C13.6231 22.0667 13.2872 21.9083 12.8923 21.925C12.4974 21.9417 12.1833 22.1 11.95 22.4L7.8 28C7.5 28.425 7.45 28.8479 7.65 29.2688C7.85 29.6896 8.2 29.9 8.7 29.9Z"
+                    />
+                  </svg>
+                </a>
+                <div class="modal" id="thumbnail">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <img
+                        class="thumbnail__img"
+                        src="../img/ICDL Class.jpg"
+                        alt="پیش نمایشی برای این سفارش در درسترس نیست!"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <a href="OrderCheckoutDetails.html" class="btn btn--primary"
+                  >جزئیات</a
+                >
+              </td>
+            </tr>
+            <tr class="">
+              <td>بنر برای ظرف فروشی</td>
+              <td>44444</td>
+              <td>2000</td>
+              <td>غلام حیدر</td>
+              <td>0776513131</td>
+              <td>2 / 3 / 1402</td>
+              <td>2 / 3 / 1402</td>
+              <td class="flex gap-3">
+                <a
+                  href="#"
+                  class="btn--icon"
+                  data-bs-toggle="modal"
+                  data-bs-target="#thumbnail"
+                >
+                  <svg
+                    width="39"
+                    height="39"
+                    viewBox="0 0 39 39"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.7 38.55C3.39833 38.55 2.28958 38.0921 1.37375 37.1763C0.457917 36.2604 0 35.1517 0 33.85V4.75C0 3.43457 0.457917 2.31405 1.37375 1.38845C2.28958 0.462816 3.39833 0 4.7 0H33.8C35.1154 0 36.236 0.462816 37.1616 1.38845C38.0872 2.31405 38.55 3.43457 38.55 4.75V33.85C38.55 35.1517 38.0872 36.2604 37.1616 37.1763C36.236 38.0921 35.1154 38.55 33.8 38.55H4.7ZM4.7 33.85H33.8V4.75H4.7V33.85ZM8.7 29.9H29.85C30.35 29.9 30.7 29.6896 30.9 29.2688C31.1 28.8479 31.0667 28.425 30.8 28L25.1 20.2C24.8564 19.9 24.5372 19.7417 24.1423 19.725C23.7474 19.7083 23.4333 19.8667 23.2 20.2L17.55 27.45L13.9 22.4C13.6231 22.0667 13.2872 21.9083 12.8923 21.925C12.4974 21.9417 12.1833 22.1 11.95 22.4L7.8 28C7.5 28.425 7.45 28.8479 7.65 29.2688C7.85 29.6896 8.2 29.9 8.7 29.9Z"
+                    />
+                  </svg>
+                </a>
+                <div class="modal" id="thumbnail">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <img
+                        class="thumbnail__img"
+                        src="../img/ICDL Class.jpg"
+                        alt="پیش نمایشی برای این سفارش در درسترس نیست!"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <a href="OrderCheckoutDetails.html" class="btn btn--primary"
+                  >جزئیات</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
         <div class="income-element flex gap-32">
-          <p class="heading-primary">مجموعه درآمد خالص:</p>
+          <p class="heading-primary">تعداد سفارشات</p>
+          <div class="number-preview">00</div>
+          <div class="div"></div>
+          <p class="heading-primary">مجموعه درآمد:</p>
           <div class="number-preview">00</div>
         </div>
       </section>

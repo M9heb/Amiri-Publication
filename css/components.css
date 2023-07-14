@@ -226,3 +226,9 @@ textarea:focus .form-control:focus {
 .income-element .number-preview {
   background-color: var(--color-pale-green);
 }
+
+/* Filter-row  */
+.filter-row .search-input {
+  width: 100%;
+  margin-right: auto;
+}

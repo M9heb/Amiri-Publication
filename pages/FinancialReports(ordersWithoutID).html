@@ -259,84 +259,111 @@
         </ul>
       </nav>
       <section class="main-content">
-        <form
-          class="date-container justify-content-center flex gap-32 mb-8"
-          action=""
-        >
-          <input type="date" name="" id="" class="text-input" />
-          <p class="between-date-text">الی</p>
-          <input type="date" name="" id="" class="text-input" />
-          <input type="submit" value="نمایش" class="btn btn--primary" />
-        </form>
-        <div class="v-f-gap-32">
-          <div
-            class="notification-bar notification-bar__green align-items-center"
+        <div class="categories categories__new">
+          <a href="FinancialReports(ordersWithID).html" class="category"
+            >سفارشات با فاکتور</a
           >
-            <h2 class="heading-secondary mb-0">سفارشات</h2>
-            <div class="h-f-gap-32 align-items-center">
-              <p class="fz32 mb-0 v-align">تعداد</p>
-              <div class="number-preview">00</div>
-              <div></div>
-              <p class="fz32 mb-0 v-align">مجموعه</p>
-              <div class="number-preview">00</div>
-              <a href="#" class="btn btn--primary btn__small">جزئیات</a>
-            </div>
-          </div>
-          <div
-            class="notification-bar notification-bar__green align-items-center"
+          <a
+            href="FinancialReports(ordersWithoutID).html"
+            class="category category--new"
+            >سفارشات بدون فاکتور</a
           >
-            <h2 class="heading-secondary mb-0">مصارف</h2>
-            <div class="h-f-gap-32 align-items-center">
-              <p class="fz32 mb-0 v-align">تعداد</p>
-              <div class="number-preview">00</div>
-              <div></div>
-              <p class="fz32 mb-0 v-align">مجموعه</p>
-              <div class="number-preview">00</div>
-              <a href="#" class="btn btn--primary btn__small">جزئیات</a>
-            </div>
-          </div>
-          <div
-            class="notification-bar notification-bar__green align-items-center"
+        </div>
+        <div class="flex gap-5 mb-8 filter-row">
+          <form
+            class="date-container justify-content-center flex gap-32"
+            action=""
           >
-            <h2 class="heading-secondary mb-0">خریدها</h2>
-            <div class="h-f-gap-32 align-items-center">
-              <p class="fz32 mb-0 v-align">تعداد</p>
-              <div class="number-preview">00</div>
-              <div></div>
-              <p class="fz32 mb-0 v-align">مجموعه</p>
-              <div class="number-preview">00</div>
-              <a href="#" class="btn btn--primary btn__small">جزئیات</a>
-            </div>
-          </div>
-          <div
-            class="notification-bar notification-bar__green align-items-center"
-          >
-            <h2 class="heading-secondary mb-0">معاشات</h2>
-            <div class="h-f-gap-32 align-items-center">
-              <p class="fz32 mb-0 v-align">تعداد</p>
-              <div class="number-preview">00</div>
-              <div></div>
-              <p class="fz32 mb-0 v-align">مجموعه</p>
-              <div class="number-preview">00</div>
-              <a href="#" class="btn btn--primary btn__small">جزئیات</a>
-            </div>
-          </div>
-          <div
-            class="notification-bar notification-bar__green align-items-center"
-          >
-            <h2 class="heading-secondary mb-0">غرضه ها</h2>
-            <div class="h-f-gap-32 align-items-center">
-              <p class="fz32 mb-0 v-align">تعداد</p>
-              <div class="number-preview">00</div>
-              <div></div>
-              <p class="fz32 mb-0 v-align">مجموعه</p>
-              <div class="number-preview">00</div>
-              <a href="#" class="btn btn--primary btn__small">جزئیات</a>
-            </div>
+            <input type="date" name="" id="" class="text-input" />
+            <p class="between-date-text">الی</p>
+            <input type="date" name="" id="" class="text-input" />
+            <button type="submit" class="btn btn--primary">
+              <svg
+                class="width36"
+                xmlns="http://www.w3.org/2000/svg"
+                height="48"
+                viewBox="0 -960 960 960"
+                width="48"
+              >
+                <path
+                  d="M796-121 533-384q-30 26-69.959 40.5T378-329q-108.162 0-183.081-75Q120-479 120-585t75-181q75-75 181.5-75t181 75Q632-691 632-584.85 632-542 618-502q-14 40-42 75l264 262-44 44ZM377-389q81.25 0 138.125-57.5T572-585q0-81-56.875-138.5T377-781q-82.083 0-139.542 57.5Q180-666 180-585t57.458 138.5Q294.917-389 377-389Z"
+                />
+              </svg>
+            </button>
+          </form>
+          <div class="search-input">
+            <input
+              type="search"
+              class="form-control text-input"
+              placeholder="جستجو بر اساس نام سفارش ویا آیدی..."
+            />
           </div>
         </div>
+        <table class="table-custom table-custom__red">
+          <thead>
+            <tr>
+              <th>نام سفارش</th>
+              <th>پول کل</th>
+              <th>تعداد</th>
+              <th>تاریخ ثبت</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="">
+              <td>فوتوکاپی رنگی</td>
+              <td>400</td>
+              <td>20</td>
+              <td>2 / 3 / 1402</td>
+            </tr>
+            <tr class="">
+              <td>فوتوکاپی رنگی</td>
+              <td>400</td>
+              <td>20</td>
+              <td>2 / 3 / 1402</td>
+            </tr>
+            <tr class="">
+              <td>فوتوکاپی رنگی</td>
+              <td>400</td>
+              <td>20</td>
+              <td>2 / 3 / 1402</td>
+            </tr>
+            <tr class="">
+              <td>فوتوکاپی رنگی</td>
+              <td>400</td>
+              <td>20</td>
+              <td>2 / 3 / 1402</td>
+            </tr>
+            <tr class="">
+              <td>فوتوکاپی رنگی</td>
+              <td>400</td>
+              <td>20</td>
+              <td>2 / 3 / 1402</td>
+            </tr>
+            <tr class="">
+              <td>فوتوکاپی رنگی</td>
+              <td>400</td>
+              <td>20</td>
+              <td>2 / 3 / 1402</td>
+            </tr>
+            <tr class="">
+              <td>فوتوکاپی رنگی</td>
+              <td>400</td>
+              <td>20</td>
+              <td>2 / 3 / 1402</td>
+            </tr>
+            <tr class="">
+              <td>فوتوکاپی رنگی</td>
+              <td>400</td>
+              <td>20</td>
+              <td>2 / 3 / 1402</td>
+            </tr>
+          </tbody>
+        </table>
         <div class="income-element flex gap-32">
-          <p class="heading-primary">مجموعه درآمد خالص:</p>
+          <p class="heading-primary">تعداد سفارشات</p>
+          <div class="number-preview">00</div>
+          <div class="div"></div>
+          <p class="heading-primary">مجموعه درآمد:</p>
           <div class="number-preview">00</div>
         </div>
       </section>
