@@ -28,6 +28,13 @@ html {
   visibility: hidden;
   opacity: 0;
 }
+.p {
+  font-size: 1.8rem;
+}
+.ltr {
+  direction: ltr !important;
+  text-align: left !important;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -43,6 +50,7 @@ a:hover {
   --color-pale-pink-border: #fbd5d5;
   --color-green: #23e788;
   --color-red: #e62323;
+  --color-danger: #ffc107;
   --color-bright-red: hwb(0 34% 10%);
 
   --color-bright-green: #7ef1ba;
@@ -254,6 +262,7 @@ body {
   overflow: hidden;
   top: 20vh;
 }
+
 .modal-content {
   padding: 3.2rem;
 }

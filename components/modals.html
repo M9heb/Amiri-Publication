@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css" />
+    <script defer src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/layouts.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <title>Modals</title>
+  </head>
+  <body style="direction: rtl">
+    <!--  Modal trigger button  -->
+    <button
+      type="button"
+      class="btn btn--primary btn-lg"
+      data-bs-toggle="modal"
+      data-bs-target="#modal--confirmation"
+    >
+      Launch
+    </button>
+
+    <!-- Confirmation Modal-->
+    <div
+      class="modal fade"
+      id="modal--confirmation"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalTitleId"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-img modal-img__green"></div>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid modal-text">
+              آیا اطمینان به انجام این عمل دارید؟ بعد از انجام دیگر راه بازگشتی
+              نخواهد بود.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn--cancel btn--center">
+              تایید
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <!--  Modal trigger button  -->
+    <button
+      type="button"
+      class="btn btn--primary btn-lg"
+      data-bs-toggle="modal"
+      data-bs-target="#modal--alertion"
+    >
+      Launch
+    </button>
+
+    <!-- Alertion Modal-->
+    <div
+      class="modal fade"
+      id="modal--alertion"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalTitleId"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-img modal-img__red"></div>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid modal-text">
+              عمل شما با موفقیت انجام شد.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn--primary btn--center">
+              تایید
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <!--  Modal trigger button  -->
+    <button
+      type="button"
+      class="btn btn--primary btn-lg"
+      data-bs-toggle="modal"
+      data-bs-target="#modal--order-confirmation"
+    >
+      Launch
+    </button>
+
+    <!-- Order Confirmation Modal-->
+    <div
+      class="modal fade"
+      id="modal--order-confirmation"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalTitleId"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-img modal-img__green"></div>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid modal-text">
+              سفارش با موفقیت ثبت شد. برای چاپ فاکتور سفارش میتوانید از دکمه زیر
+              استفاده کنید.
+            </div>
+          </div>
+          <div class="modal-footer flex gap-3 btn--center">
+            <button type="button" class="btn btn--primary">تایید</button>
+            <button type="button" class="btn btn--primary">چاپ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <!--  Modal trigger button  -->
+    <button
+      type="button"
+      class="btn btn--primary btn-lg"
+      data-bs-toggle="modal"
+      data-bs-target="#modal--loan-alert"
+    >
+      Launch
+    </button>
+
+    <!-- Loan Alert Modal-->
+    <div
+      class="modal fade"
+      id="modal--loan-alert"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalTitleId"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-img modal-img__danger"></div>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid modal-text">
+              حساب سفارش مورد نظر هنوز کاملاً پرداخت نشده! درصورت ادامه دادن به
+              جریان دکمه تایید، و درصورت تصفیه حساب سفارش روی دکمه پرداخت کلیک
+              کنید.
+            </div>
+          </div>
+          <div class="modal-footer flex gap-3 btn--center">
+            <button type="button" class="btn btn--danger">تایید</button>
+            <button type="button" class="btn btn--primary">پرداخت</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <!--  Modal trigger button  -->
+    <button
+      type="button"
+      class="btn btn--primary btn-lg"
+      data-bs-toggle="modal"
+      data-bs-target="#modal--loanpayment"
+    >
+      Launch
+    </button>
+
+    <!-- Loan Payment Modal-->
+    <div
+      class="modal fade"
+      id="modal--loanpayment"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalTitleId"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <form class="modal-content">
+          <div class="modal-header justify-content-center">
+            <h5 class="modal-title heading-secondary" id="modalTitleId">
+              پرداخت پول باقی
+            </h5>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-3 v-flex v-f-gap-16">
+                <label for="id" class="label">آیدی</label>
+                <input type="number" class="text-input" name="id" id="id" />
+              </div>
+              <div class="col-3 v-flex v-f-gap-16">
+                <label for="mainremaining" class="label">پول باقی</label>
+                <input
+                  type="number"
+                  class="text-input"
+                  name="mainremaining"
+                  id="mainremaining"
+                />
+              </div>
+
+              <div class="col v-flex v-f-gap-16">
+                <label for="recieved" class="label">میزان پرداختی</label>
+                <input
+                  required
+                  type="number"
+                  id="recieved"
+                  name="recieved"
+                  class="text-input"
+                />
+              </div>
+            </div>
+
+            <div class="row my-5">
+              <div class="col-6 v-flex v-f-gap-16">
+                <label for="newremaining" class="label">الباقی جدید</label>
+                <input
+                  type="number"
+                  name="newremaining"
+                  id="newremaining"
+                  class="text-input"
+                />
+              </div>
+              <div class="col-6 row">
+                <button
+                  style="align-self: flex-end"
+                  type="submit"
+                  class="col-6 btn btn--primary"
+                >
+                  ثبت
+                </button>
+                <button
+                  style="align-self: flex-end"
+                  type=""
+                  class="col-6 btn btn--cancel"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                >
+                  کنسل
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <!-- Button trigger modal -->
+
+        <script>
+          var modalId = document.getElementById("modalId");
+
+          modalId.addEventListener("show.bs.modal", function (event) {
+            // Button that triggered the modal
+            let button = event.relatedTarget;
+            // Extract info from data-bs-* attributes
+            let recipient = button.getAttribute("data-bs-whatever");
+
+            // Use above variables to manipulate the DOM
+          });
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

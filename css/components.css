@@ -92,16 +92,31 @@ textarea:focus .form-control:focus {
   fill: white;
   background-color: var(--color-green);
 }
+.btn--danger {
+  fill: white;
+  color: white;
+  background-color: var(--color-danger);
+}
+.btn--danger:hover,
+.btn--danger:active {
+  color: var(--color-dark-brown);
+  fill: var(--color-dark-brown);
+  background-color: #ffc107;
+}
 .btn--cancel {
   color: white;
   fill: white;
-
   background-color: var(--color-red);
 }
 .btn--cancel:hover,
 .btn--cancel:active {
   background-color: var(--color-bright-red);
 }
+.btn--center {
+  text-align: center;
+  margin: auto;
+}
+
 .link {
   font-weight: normal;
   font-size: 2.4rem;
@@ -231,4 +246,43 @@ textarea:focus .form-control:focus {
 .filter-row .search-input {
   width: 100%;
   margin-right: auto;
+}
+
+/* Sign in box */
+
+.sign-in-box {
+  width: 330px;
+  margin: 15vh auto 0;
+}
+.sign-in-img {
+  display: block;
+  margin: 2rem auto;
+  width: 20rem;
+  height: 20rem;
+  fill: var(--color-dark-brown);
+}
+
+/* Modals */
+.modal-footer {
+  border: none;
+}
+.modal-img {
+  width: 9.6rem;
+  height: 9.6rem;
+  background-color: var(--color-pale-green);
+  margin: auto;
+}
+.modal-img__green {
+  fill: var(--color-green);
+}
+.modal-img__red {
+  fill: var(--color-red);
+}
+.modal-img__danger {
+  fill: var(--color-danger);
+}
+.modal-text {
+  font-size: 2.4rem;
+  direction: rtl;
+  text-align: center;
 }
