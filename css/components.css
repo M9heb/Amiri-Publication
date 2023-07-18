@@ -269,7 +269,6 @@ textarea:focus .form-control:focus {
 .modal-img {
   width: 9.6rem;
   height: 9.6rem;
-  background-color: var(--color-pale-green);
   margin: auto;
 }
 .modal-img__green {
