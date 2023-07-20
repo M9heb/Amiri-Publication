@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/layouts.css" />
     <link rel="stylesheet" href="../css/components.css" />
-    <title>بخش تنظیمات</title>
+    <title>جدول کارمندان</title>
   </head>
   <body>
     <nav class="top-nav">
@@ -45,7 +45,7 @@
           </a>
         </div>
       </div>
-      <h1 class="heading-primary">بخش تنظیمات</h1>
+      <h1 class="heading-primary">لیست کارمندان</h1>
       <div class="nav--right-icons">
         <div class="icons-h-container">
           <a class="profile-icon" href="#">
@@ -265,119 +265,31 @@
       </nav>
       <section class="main-content">
         <div class="container">
-          <div class="group mb-8">
-            <h2 class="heading-secondary mb-5">تنظیمات کارمندان</h2>
-            <div class="row gap-32">
-              <button data-bs-toggle="modal"
-              data-bs-target="#newemployee" id="newemployee" class="btn btn--primary col">افزودن کارمند</button>
-              <a href="#" class="btn btn--primary col">ویرایش کارمندان</a>
-            </div>
-          </div>
-          <div class="group">
-            <h2 class="heading-secondary mb-5">تنظیمات دیتابیس</h2>
-            <div class="row gap-32"></div>
-          </div>
+          <h2 class="heading-secondary mb-5">لیست کارمندان موجود</h2>
+          <table class="table-custom table-custom__red">
+            <thead>
+              <tr>
+                <th>نام و تخلص</th>
+                <th>معاش هفته وار</th>
+                <th>تاریخ شمولیت</th>
+                <th>شماره تماس</th>
+                <th>قابلیت ها</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="">
+                <td>علی کریمی</td>
+                <td>1000</td>
+                <td>1402 / 5 / 3</td>
+                <td>0776513131</td>
+                <td class="flex gap-3">
+                  <a href="#" class="btn btn--primary">ادیت</a>
+                  <button class="btn btn--cancel">حذف</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <!-- Modal -->
-        <div
-          class="modal fade"
-          id="newemployee"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="modalTitleId"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-lg" role="document">
-            <form class="modal-content">
-              <div class="modal-header justify-content-center">
-                <h5 class="modal-title heading-secondary" id="modalTitleId">
-                  پرداخت معاش
-                </h5>
-              </div>
-              <div class="modal-body">
-                <div class="row">
-                  <div class="col v-flex v-f-gap-16">
-                    <label for="fullname" class="label">نام و تخلص</label>
-                    <input
-                      type="text"
-                      class="text-input"
-                      name="fullname"
-                      id="fullname"
-                      required
-                    />
-                  </div>
-
-                  <div class="col v-flex v-f-gap-16">
-                    <label for="employeetype" class="label">معاش</label>
-                    <select
-                      required
-                      id="employeetype"
-                      class="text-input"
-                    >
-                    <option value="">نوع کارمند را انتخاب کنید</option>
-                    <option value=""></option>
-                  </div>
-                </div>
-
-                <div class="row my-5">
-                  <div class="col-6 v-flex v-f-gap-16">
-                    <label for="fahtername" class="label">نام پدر</label>
-                    <input required type="text" id="fahtername" class="text-input" />
-                  </div>
-                  <div class="col-6 v-flex v-f-gap-16">
-                    <label for="weeklysalary" class="label">معاش هفته وار</label>
-                    <input required type="number" id="weeklysalary" class="text-input" />
-                  </div>
-                  <div class="col-6 row">
-                    <button
-                      style="align-self: flex-end"
-                      type="submit"
-                      class="col-6 btn btn--primary"
-                    >
-                      ثبت
-                    </button>
-                    <button
-                      style="align-self: flex-end"
-                      type=""
-                      class="col-6 btn btn--cancel"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    >
-                      کنسل
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </form>
-            <!-- Button trigger modal -->
-
-            <script>
-              var modalId = document.getElementById("modalId");
-
-              modalId.addEventListener("show.bs.modal", function (event) {
-                // Button that triggered the modal
-                let button = event.relatedTarget;
-                // Extract info from data-bs-* attributes
-                let recipient = button.getAttribute("data-bs-whatever");
-
-                // Use above variables to manipulate the DOM
-              });
-            </script>
-          </div>
-        </div>
-
-        <script>
-          var modalId = document.getElementById("modalId");
-
-          modalId.addEventListener("show.bs.modal", function (event) {
-            // Button that triggered the modal
-            let button = event.relatedTarget;
-            // Extract info from data-bs-* attributes
-            let recipient = button.getAttribute("data-bs-whatever");
-
-            // Use above variables to manipulate the DOM
-          });
-        </script>
       </section>
     </div>
     <script src="../js/script.js"></script>
