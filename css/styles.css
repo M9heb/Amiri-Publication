@@ -17,7 +17,7 @@
   font-weight: 900;
 }
 html {
-  font-size: 50.5%;
+  font-size: 50%;
 }
 * {
   box-sizing: border-box;
@@ -261,6 +261,7 @@ body {
   border-radius: 20px;
   overflow: hidden;
   top: 20vh;
+  margin-bottom: 5rem;
 }
 
 .modal-content {

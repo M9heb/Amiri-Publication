@@ -71,3 +71,13 @@ document.addEventListener("click", function (event) {
     deleteOrder(event);
   }
 });
+
+// font-size settings
+const htmlsize = document.getElementsByTagName("html");
+const slider = document.querySelector(".range-input");
+const inputValueBox = document.querySelector(".range-value");
+inputValueBox.innerHTML = slider.value + "%";
+slider.addEventListener("input", function () {
+  inputValueBox.innerHTML = this.value;
+  htmlsize[0].style.fontSize = `${this.value}%`;
+});

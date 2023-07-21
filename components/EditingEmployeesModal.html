@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css" />
+    <script defer src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/layouts.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <title>Modals</title>
+  </head>
+  <body style="direction: rtl">
+    <!-- Button trigger modal -->
+    <button
+      type="button"
+      class="btn btn--primary btn-lg"
+      data-bs-toggle="modal"
+      data-bs-target="#Editingemployee"
+    >
+      ویرایش کارمند
+    </button>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="Editingemployee"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalTitleId"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <form class="modal-content">
+          <div class="modal-header justify-content-center">
+            <h5 class="modal-title heading-secondary" id="modalTitleId">
+              افزودن کارمند
+            </h5>
+          </div>
+          <div class="modal-body">
+            <div class="row mb-5">
+              <div class="col v-flex v-f-gap-16">
+                <label for="fullname" class="label">نام و تخلص</label>
+                <input
+                  type="text"
+                  class="text-input"
+                  name="fullname"
+                  id="fullname"
+                  required
+                />
+              </div>
+              <div class="col-6 v-flex v-f-gap-16">
+                <label for="fname" class="label">نام پدر</label>
+                <input
+                  type="text"
+                  class="text-input"
+                  name="fathername"
+                  id="fname"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row mb-5">
+              <div class="col-6 v-flex v-f-gap-16">
+                <label for="phone" class="label">شماره تماس</label>
+                <input
+                  type="text"
+                  class="text-input"
+                  name="phonenumber"
+                  id="phone"
+                  required
+                />
+              </div>
+              <div class="col-6 v-flex v-f-gap-16">
+                <label for="address" class="label">آدرس</label>
+                <input
+                  type="text"
+                  class="text-input"
+                  name="address"
+                  id="address"
+                />
+              </div>
+            </div>
+            <div class="row mb-5">
+              <div class="col-6 v-flex v-f-gap-16">
+                <label for="salary" class="label">معاش هفته وار</label>
+                <input
+                  type="number"
+                  class="text-input"
+                  name="salary"
+                  id="salary"
+                  required
+                />
+              </div>
+              <div class="col-6 v-flex v-f-gap-16">
+                <label for="photo" class="label">عکس کارمند</label>
+                <input type="file" class="text-input" name="photo" id="photo" />
+              </div>
+            </div>
+            <div class="row mb-5">
+              <div class="employee-img-container">
+                <img class="employee-img" src="#" alt="Employees image." />
+              </div>
+            </div>
+            <div class="row">
+              <button
+                style="align-self: flex-end"
+                type="submit"
+                class="col-6 btn btn--primary"
+              >
+                تایید
+              </button>
+              <button
+                style="align-self: flex-end"
+                type=""
+                class="col-6 btn btn--cancel"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                کنسل
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      var Editingemployee = document.getElementById("Editingemployee");
+
+      Editingemployee.addEventListener("show.bs.modal", function (event) {
+        // Button that triggered the modal
+        let button = event.relatedTarget;
+        // Extract info from data-bs-* attributes
+        let recipient = button.getAttribute("data-bs-whatever");
+
+        // Use above variables to manipulate the DOM
+      });
+    </script>
+  </body>
+</html>

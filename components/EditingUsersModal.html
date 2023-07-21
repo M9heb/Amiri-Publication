@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css" />
+    <script defer src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/layouts.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <title>Modals</title>
+  </head>
+  <body style="direction: rtl">
+    <button
+      class="btn btn--primary col-3"
+      data-bs-toggle="modal"
+      data-bs-target="#editUser"
+    >
+      ویرایش کاربر
+    </button>
+    <div
+      class="modal fade"
+      id="editUser"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalTitleId"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <form class="modal-content">
+          <div class="modal-header justify-content-center">
+            <h5 class="modal-title heading-secondary" id="modalTitleId">
+              ویرایش کاربر
+            </h5>
+          </div>
+          <div class="modal-body">
+            <div class="row mb-5">
+              <div class="col v-flex v-f-gap-16">
+                <label for="username" class="label">نام کاربری</label>
+                <input
+                  type="text"
+                  class="text-input"
+                  name="username"
+                  id="username"
+                  required
+                />
+              </div>
+              <div class="col-6 v-flex v-f-gap-16">
+                <label for="emain" class="label">ایمیل آدرس</label>
+                <input
+                  type="email"
+                  class="text-input"
+                  name="email"
+                  id="email"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row mb-5">
+              <div class="col-6 v-flex v-f-gap-16">
+                <label for="phone" class="label">رمز عبور</label>
+                <input
+                  type="password"
+                  class="text-input"
+                  name="password"
+                  id="password"
+                  required
+                />
+              </div>
+              <div class="col-6 v-flex v-f-gap-16">
+                <label for="address" class="label">تایید رمز عبور</label>
+                <input
+                  type="password"
+                  class="text-input"
+                  name="passconfirm"
+                  id="passconfirm"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row mb-5">
+              <div class="col-6 v-flex v-f-gap-16">
+                <label for="usertype" class="label">نوع کاربر</label>
+                <select name="usertype" required="usertype" class="text-input">
+                  <option value="">انتخاب نوع کاربر</option>
+                  <option value="standard">کاربر معمولی</option>
+                  <option value="admin">کاربر ادمین</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <button
+                style="align-self: flex-end"
+                type="submit"
+                class="col-6 btn btn--primary"
+              >
+                ثبت
+              </button>
+              <button
+                style="align-self: flex-end"
+                type=""
+                class="col-6 btn btn--cancel"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                کنسل
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      var editUser = document.getElementById("editUser");
+
+      editUser.addEventListener("show.bs.modal", function (event) {
+        // Button that triggered the modal
+        let button = event.relatedTarget;
+        // Extract info from data-bs-* attributes
+        let recipient = button.getAttribute("data-bs-whatever");
+
+        // Use above variables to manipulate the DOM
+      });
+    </script>
+  </body>
+</html>
