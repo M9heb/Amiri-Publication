@@ -138,6 +138,9 @@ textarea:focus .form-control:focus {
   margin: auto;
 }
 
+.btn--print:hover {
+  background-color: var(--color-bright-green);
+}
 .link {
   font-weight: normal;
   font-size: 2.4rem;
@@ -245,7 +248,23 @@ textarea:focus .form-control:focus {
 .table-custom__green tbody tr:last-of-type {
   border-bottom: 1px solid var(--color-pale-green-border);
 }
+.table-header-red {
+  border: 1px solid var(--color-pale-pink-border);
+}
+.table-header-red thead {
+  background-color: var(--color-pale-pink);
+  height: 4rem;
+}
+.table-header-red thead th {
+  width: 20%;
+}
 
+.table-header-red tbody tr {
+  height: 8rem;
+}
+
+@media screen {
+}
 /* Search bar settings */
 .between-date-text {
   font-size: 3.2rem;
