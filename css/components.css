@@ -340,3 +340,122 @@ textarea:focus .form-control:focus {
   height: 100%;
   object-fit: cover;
 }
+.print--container {
+  display: none;
+}
+.print {
+  display: none;
+}
+
+/* Printing media */
+@media print {
+  * {
+    margin: auto;
+    padding: 0;
+    overflow: visible;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+  }
+  .print--container {
+    display: block;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-right: 45pt;
+  }
+  .print {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .img {
+    width: 87.37px;
+    margin-top: 40px;
+    margin-bottom: 6px;
+  }
+  .heading-primary {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  .p {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  .main-content {
+    position: relative;
+    right: 0;
+    padding: 2cm;
+    margin: auto;
+    overflow: visible;
+  }
+  .layout {
+    padding: 0;
+    margin: 0;
+  }
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+  .top-nav {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+  .heading-secondary {
+    font-size: 14px;
+    text-align: center;
+    margin-right: 45pt;
+    margin-bottom: 14px;
+  }
+  .table-responsive {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px !important;
+    width: max-content;
+    overflow: visible;
+  }
+  .table-custom {
+    width: 100%;
+    overflow: visible;
+  }
+  .table-custom thead,
+  .table-custom tbody {
+    width: fit-content;
+    overflow: visible;
+  }
+  .table-custom thead th {
+    height: 30px;
+    font-size: 12px;
+    border-bottom: 2px double var(--color-pale-pink-border);
+    background: var(--color-pale-pink) !important;
+  }
+
+  .table-custom thead tr th:last-child,
+  .table-custom tbody tr td:last-child {
+    display: none;
+  }
+  .table-custom thead tr th,
+  .table-custom tbody tr td {
+    width: 15%;
+  }
+  .table-custom tbody tr {
+    height: 40px !important;
+  }
+  .table-custom tbody tr td {
+    padding: 2.5px;
+    font-size: 12px;
+  }
+  .btn {
+    display: none !important;
+  }
+  .btn--icon {
+    display: none;
+  }
+}

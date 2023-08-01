@@ -73,11 +73,27 @@ document.addEventListener("click", function (event) {
 });
 
 // font-size settings
+
 const htmlsize = document.getElementsByTagName("html");
 const slider = document.querySelector(".range-input");
 const inputValueBox = document.querySelector(".range-value");
-inputValueBox.innerHTML = slider.value + "%";
+if (document.cookie) {
+  slider.value = getFontSize();
+  inputValueBox.innerHTML = getFontSize();
+  htmlsize[0].style.fontSize = `${getFontSize()}%`;
+} else {
+  inputValueBox.innerHTML = slider.value + "%";
+}
+
 slider.addEventListener("input", function () {
-  inputValueBox.innerHTML = this.value;
-  htmlsize[0].style.fontSize = `${this.value}%`;
+  setFontSize(this.value);
+  inputValueBox.innerHTML = getFontSize();
+  htmlsize[0].style.fontSize = `${getFontSize()}%`;
 });
+
+function setFontSize(size) {
+  localStorage.setItem("fontSize", size);
+}
+function getFontSize() {
+  return localStorage.getItem("fontSize");
+}
