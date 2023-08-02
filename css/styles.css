@@ -185,12 +185,14 @@ body {
   direction: rtl;
 }
 .nav--element {
-  padding: 1rem 3rem;
+  padding-right: 3rem;
   width: 41rem;
   height: 7.2rem;
   color: var(--color-dark-brown);
   position: relative;
   transition: all 0.2s;
+  display: flex;
+  align-items: center;
 }
 .nav--element:hover,
 .nav--element:active {

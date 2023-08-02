@@ -75,12 +75,15 @@ document.addEventListener("click", function (event) {
 // font-size settings
 
 const htmlsize = document.getElementsByTagName("html");
+
+if (localStorage.fontSize) {
+  htmlsize[0].style.fontSize = `${getFontSize()}%`;
+}
 const slider = document.querySelector(".range-input");
 const inputValueBox = document.querySelector(".range-value");
-if (document.cookie) {
+if (localStorage.fontSize) {
   slider.value = getFontSize();
   inputValueBox.innerHTML = getFontSize();
-  htmlsize[0].style.fontSize = `${getFontSize()}%`;
 } else {
   inputValueBox.innerHTML = slider.value + "%";
 }
