@@ -100,3 +100,27 @@ function setFontSize(size) {
 function getFontSize() {
   return localStorage.getItem("fontSize");
 }
+
+// Navbar selection
+
+localStorage.setItem("navItem", "element0");
+const id = localStorage.getItem("navItem");
+
+const setElementAsActive = () => {
+  if (id) {
+    document.getElementById(id).classList.add("nav-element__active");
+  }
+};
+const handleClick = (id) => {
+  document.getElementById(id).classList.remove("nav-element__active");
+  localStorage.setItem("navItem", id);
+  setElementAsActive();
+};
+
+for (let i = 0; i <= 6; i++) {
+  const elementId = `element${i}`;
+  const element = document.getElementById(elementId);
+  element.addEventListener("click", () => {
+    handleClick(elementId);
+  });
+}
